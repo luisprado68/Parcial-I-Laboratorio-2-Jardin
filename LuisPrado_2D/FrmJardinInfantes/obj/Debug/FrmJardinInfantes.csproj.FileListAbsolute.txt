@@ -1,0 +1,13 @@
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\FrmJardinInfantes.exe
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\JardinInfantes-Biblioteca.dll
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\JardinInfantes-Biblioteca.pdb
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csprojAssemblyReference.cache
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmPrincipal.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmAltaAlumno.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmAltaDocente.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmAula.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.Properties.Resources.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csproj.GenerateResource.cache
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csproj.CoreCompileInputs.cache
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.exe
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.pdb
