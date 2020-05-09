@@ -46,6 +46,7 @@
             this.lbProfesor = new System.Windows.Forms.Label();
             this.lbProfeAula = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.agregarProfesor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -105,6 +106,7 @@
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(121, 21);
             this.cmbColor.TabIndex = 6;
+            this.cmbColor.Text = "Salas";
             // 
             // cmbTurno
             // 
@@ -116,6 +118,7 @@
             this.cmbTurno.Name = "cmbTurno";
             this.cmbTurno.Size = new System.Drawing.Size(121, 21);
             this.cmbTurno.TabIndex = 7;
+            this.cmbTurno.Text = "Turno";
             // 
             // cmbProfesor
             // 
@@ -124,6 +127,7 @@
             this.cmbProfesor.Name = "cmbProfesor";
             this.cmbProfesor.Size = new System.Drawing.Size(81, 21);
             this.cmbProfesor.TabIndex = 8;
+            this.cmbProfesor.Text = "Docentes";
             // 
             // button1
             // 
@@ -149,6 +153,7 @@
             // 
             // listAlumnosSala
             // 
+            this.listAlumnosSala.AllowDrop = true;
             this.listAlumnosSala.FormattingEnabled = true;
             this.listAlumnosSala.Location = new System.Drawing.Point(1, 86);
             this.listAlumnosSala.Name = "listAlumnosSala";
@@ -157,6 +162,7 @@
             // 
             // listAlumnosSinAula
             // 
+            this.listAlumnosSinAula.AllowDrop = true;
             this.listAlumnosSinAula.FormattingEnabled = true;
             this.listAlumnosSinAula.Location = new System.Drawing.Point(285, 86);
             this.listAlumnosSinAula.Name = "listAlumnosSinAula";
@@ -170,7 +176,6 @@
             this.listProfesoresDisponibles.Name = "listProfesoresDisponibles";
             this.listProfesoresDisponibles.Size = new System.Drawing.Size(313, 277);
             this.listProfesoresDisponibles.TabIndex = 15;
-            this.listProfesoresDisponibles.SelectedIndexChanged += new System.EventHandler(this.listProfesoresDisponibles_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -218,12 +223,24 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // agregarProfesor
+            // 
+            this.agregarProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.agregarProfesor.Location = new System.Drawing.Point(569, 15);
+            this.agregarProfesor.Name = "agregarProfesor";
+            this.agregarProfesor.Size = new System.Drawing.Size(115, 21);
+            this.agregarProfesor.TabIndex = 21;
+            this.agregarProfesor.Text = "Agregar Profesor";
+            this.agregarProfesor.UseVisualStyleBackColor = true;
+            this.agregarProfesor.Click += new System.EventHandler(this.agregarProfesor_Click);
+            // 
             // FrmAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 410);
+            this.Controls.Add(this.agregarProfesor);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lbProfeAula);
             this.Controls.Add(this.lbProfesor);
@@ -271,5 +288,6 @@
         private System.Windows.Forms.Label lbProfesor;
         private System.Windows.Forms.Label lbProfeAula;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button agregarProfesor;
     }
 }

@@ -68,17 +68,18 @@ namespace FrmJardinInfantes
                     controles.Text = "";
                     // Eliminar el texto del TextBox
                 }
-                //if (controles is RadioButton)
-                //{
-                //    controles. = "";
-                //    // Eliminar el texto del Label
-                //}
+                
                 if (controles is ComboBox)
                 {
                     controles.Text = "";
                     // Eliminar el texto del Combobox
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

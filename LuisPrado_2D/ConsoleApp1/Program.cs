@@ -13,6 +13,10 @@ namespace ConsoleApp1
         {
             //Prueba de codigo....
 
+            Console.WriteLine(Ecolor.Amarillo.ToString());
+            Console.WriteLine();
+
+
             //ALTA DOCENTE
 
             int horaEntrada;
@@ -27,6 +31,8 @@ namespace ConsoleApp1
             Console.WriteLine(do2.ToString());
             Console.WriteLine(do3.ToString());
             Console.WriteLine(do4.ToString());
+
+
 
             // Alta Pariente
             Console.WriteLine("*****************Lista de Padres*****************");

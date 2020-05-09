@@ -125,7 +125,7 @@ namespace FrmJardinInfantes
         //Agrego la lista de docentes sin aula a listbox
         public void CargarDocentes(List<Docente> docentes,List<Aula> aulas)
         {
-            //listProfesoresDisponibles.Items.Clear();// limpiamos la lista 
+            listProfesoresDisponibles.Items.Clear();
             bool esIgual;
 
             foreach (Docente docente in docentes)
@@ -153,7 +153,7 @@ namespace FrmJardinInfantes
 
 
 
-        //Agrego a la lista de alumnos sin aulta a la listbox
+        //Agrego a la lista de alumnos sin aula a la listbox
         public void CargarAlumnosSinAula()
         {
             listAlumnosSinAula.Items.Clear();// limpiamos la lista 
@@ -170,7 +170,7 @@ namespace FrmJardinInfantes
            
         }
 
-        //agrego un conjunto de alumnos a una sala
+        //agrego un conjunto de alumnos a una sala y  borro de la lista
         public bool AgregarAlumnoAula(List<Alumno> alumnos,Aula aula,int minimo,int maximo)
         {
             bool agrego = false;
@@ -189,7 +189,7 @@ namespace FrmJardinInfantes
             return agrego;
         }
 
-        //Agrega los alumnos que tienen aula asignada.
+        //Agrega los alumnos que tienen aula asignada a listbox.
         public void AgregarAulaList(Aula aula)
         {
             foreach (Alumno item in aula.Alumnos)
@@ -274,97 +274,91 @@ namespace FrmJardinInfantes
         //boton actualizar
         private void button1_Click(object sender, EventArgs e)
         {
-
+            bool encontroAula = false;
             
             // dependiedo del color cambia el form. y muestra los alumnos en la sala
             if (this.cmbColor.SelectedIndex + 1 == (int)Ecolor.Naranja)
             {
-                this.BackColor = Color.Orange;
-
-                if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[2].Docente.Nombre + "-" + this.aulas[2].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[2].Turno.ToString())
+                
+                for (int i = 0; i < this.aulas.Count; i++)
                 {
-                    this.lbProfeAula.Text = "";
-                    this.lbProfeAula.Text = this.cmbProfesor.SelectedItem.ToString();
+                    
+                    if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString()==this.aulas[i].ColorSala.ToString())
+                    {
+                        this.BackColor = Color.Orange;
 
-                    this.listAlumnosSala.Items.Clear();
-                    AgregarAulaList(this.aulas[2]);
-
+                        this.listAlumnosSala.Items.Clear();
+                        encontroAula = true;
+                        AgregarAulaList(this.aulas[i]);
+                    }
                 }
-                else if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[3].Docente.Nombre + "-" + this.aulas[3].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[3].Turno.ToString())
+
+                if (!encontroAula)
                 {
-                    this.lbProfeAula.Text = "";
-                    this.lbProfeAula.Text = this.cmbProfesor.SelectedItem.ToString();
-                    this.listAlumnosSala.Items.Clear();
+                    MessageBox.Show("No existe aula con esos parametros!");
+                }
 
-                    AgregarAulaList(this.aulas[3]);
-                }
-                else
-                {
-                    MessageBox.Show("No existe un aula con esos parametros!");
-                }
             }
             else if (this.cmbColor.SelectedIndex + 1== (int)Ecolor.Rojo)
             {
-                this.BackColor = Color.Red;
-
-                if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[6].Docente.Nombre + "-" + this.aulas[6].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[6].Turno.ToString())
+                // mejora buscar en la lista de aulas por docente.
+                
+                for (int i=0;i<this.aulas.Count;i++)
                 {
-                    this.listAlumnosSala.Items.Clear();
-                    AgregarAulaList(this.aulas[6]);
+                    
+                    if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString() == this.aulas[i].ColorSala.ToString())
+                    {
+                        this.BackColor = Color.Red;
+                        this.listAlumnosSala.Items.Clear();
+                        encontroAula = true;
+                        AgregarAulaList(this.aulas[i]);
+                    }
+                }
 
-                }
-                else if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[7].Docente.Nombre + "-" + this.aulas[7].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[7].Turno.ToString())
+                if (!encontroAula)
                 {
-                    this.listAlumnosSala.Items.Clear();
+                    MessageBox.Show("No existe aula con esos parametros!");
+                }
 
-                    AgregarAulaList(this.aulas[7]);
-                }
-                else
-                {
-                    MessageBox.Show("No existe un aula con esos parametros!");
-                }
+
             }
             else if (this.cmbColor.SelectedIndex + 1 == (int)Ecolor.Amarillo)
             {    // depediendo de colo profesoy y turno muestra:
                 
-                   this.BackColor = Color.Yellow;
-
-                    if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[0].Docente.Nombre + "-" + this.aulas[0].Docente.Apellido && this.cmbTurno.SelectedItem.ToString()== this.aulas[0].Turno.ToString())
+                for (int i = 0; i < this.aulas.Count; i++)
+                {
+                    
+                    if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString() == this.aulas[i].ColorSala.ToString())
                     {
+                        this.BackColor = Color.Yellow;
                         this.listAlumnosSala.Items.Clear();
-                        AgregarAulaList(this.aulas[0]);
-                        
-                    }else if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[1].Docente.Nombre + "-" + this.aulas[1].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[1].Turno.ToString())
-                    {
-                        this.listAlumnosSala.Items.Clear();
-
-                        AgregarAulaList(this.aulas[1]);
+                        encontroAula = true;
+                        AgregarAulaList(this.aulas[i]);
                     }
-                    else
-                    {
-                        MessageBox.Show("No existe un aula con esos parametros!");
-                    }
+                }
+                if (!encontroAula)
+                {
+                    MessageBox.Show("No existe aula con esos parametros!");
+                }
 
             }
             else if (this.cmbColor.SelectedIndex+1 == (int)Ecolor.Verde)
             {
-                this.BackColor = Color.Green;
-
-                if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[4].Docente.Nombre + "-" + this.aulas[4].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[4].Turno.ToString())
+                
+                for (int i = 0; i < this.aulas.Count; i++)
                 {
-                    this.listAlumnosSala.Items.Clear();
-                    AgregarAulaList(this.aulas[4]);
-
+                    
+                    if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString() == this.aulas[i].ColorSala.ToString())
+                    {
+                        this.BackColor = Color.Green;
+                        this.listAlumnosSala.Items.Clear();
+                        encontroAula = true;
+                        AgregarAulaList(this.aulas[i]);
+                    }
                 }
-                else if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[5].Docente.Nombre + "-" + this.aulas[5].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[5].Turno.ToString())
+                if (!encontroAula)
                 {
-                    this.listAlumnosSala.Items.Clear();
-
-                    AgregarAulaList(this.aulas[5]);
-                }
-                else
-                {
-                    MessageBox.Show("No existe un aula con esos parametros!");
+                    MessageBox.Show("No existe aula con esos parametros!");
                 }
             }
 
@@ -377,11 +371,6 @@ namespace FrmJardinInfantes
         }
 
         
-
-        private void listProfesoresDisponibles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         public void ListaAlumnos()
         {
@@ -476,6 +465,150 @@ namespace FrmJardinInfantes
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        
+
+        private void listAlumnosSinAula_MouseMove(object sender, EventArgs e)
+        {
+
+        }
+
+        //agregar Docente a Aula
+
+        public bool agregarDocenteAula(List<Aula> aulas,Ecolor color,Eturno turno, Docente docente)
+        {
+            bool esIgual=false;
+          
+            Aula aula;
+            
+
+            foreach (Aula item in aulas)
+            {
+                
+
+                if( item.ColorSala == color && item.Turno == turno)
+                {
+                    esIgual = true;
+                }
+            }
+
+           
+            if (!esIgual)
+            {
+                aula = new Aula(color, turno, docente);
+                aulas.Add(aula);
+
+
+                return true;
+            }
+
+            return false;
+
+        }
+        private void agregarProfesor_Click(object sender, EventArgs e)
+        {
+           
+
+            Ecolor color;
+            Eturno turno;
+            int posicion=0;
+            
+
+            if(this.cmbColor.SelectedIndex== -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para agregar docente a aula nueva");
+                
+            }else if( this.cmbTurno.SelectedIndex == -1 )
+            {
+                MessageBox.Show("No se eligio ninguna opcion para agregar docente a aula nueva");
+            }
+            else if (this.listProfesoresDisponibles.SelectedIndex == -1 )
+            {
+                MessageBox.Show("No se eligio ninguna opcion para agregar docente a aula nueva");
+            }
+            else
+            {
+                if (this.cmbColor.SelectedItem.ToString() == Ecolor.Amarillo.ToString())
+                {
+                    color = Ecolor.Amarillo;
+
+                }
+                else if (this.cmbColor.SelectedItem.ToString() == Ecolor.Naranja.ToString())
+                {
+                    color = Ecolor.Naranja;
+
+                }
+                else if (this.cmbColor.SelectedItem.ToString() == Ecolor.Rojo.ToString())
+                {
+                    color = Ecolor.Rojo;
+
+                }
+                else
+                {
+                    color = Ecolor.Verde;
+
+                }
+
+
+                if (this.cmbTurno.SelectedItem.ToString() == Eturno.Mañana.ToString())
+                {
+                    turno = Eturno.Mañana;
+
+                }
+                else
+                {
+                    turno = Eturno.Tarde;
+
+                }
+
+
+
+
+
+                //agrego los de la lista de docentes que cuando se agerga un docente se valida que no se repita.
+
+
+                for (int i = 0; i < this.docentes.Count; i++)
+                {
+
+                    if (listProfesoresDisponibles.SelectedItem.ToString() == this.docentes[i].ToString())
+                    {
+                        posicion = i;
+
+                    }
+
+                }
+
+
+
+                if (agregarDocenteAula(this.aulas, color, turno, this.docentes[posicion]))
+                {
+                    MessageBox.Show("Se agrego docente a nueva aula");
+                    AgregarDocentesAula(this.aulas);
+                    CargarDocentes(this.docentes, this.aulas);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Ya se encuentra esa sala ");
+                }
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+        private void listAlumnosSinAula_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
