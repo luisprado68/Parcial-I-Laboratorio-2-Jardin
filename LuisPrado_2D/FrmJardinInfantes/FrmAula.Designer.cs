@@ -148,13 +148,13 @@
             this.listAlumnosSala.FormattingEnabled = true;
             this.listAlumnosSala.Location = new System.Drawing.Point(1, 86);
             this.listAlumnosSala.Name = "listAlumnosSala";
-            this.listAlumnosSala.Size = new System.Drawing.Size(236, 277);
+            this.listAlumnosSala.Size = new System.Drawing.Size(263, 277);
             this.listAlumnosSala.TabIndex = 13;
             // 
             // listAlumnosSinAula
             // 
             this.listAlumnosSinAula.FormattingEnabled = true;
-            this.listAlumnosSinAula.Location = new System.Drawing.Point(243, 86);
+            this.listAlumnosSinAula.Location = new System.Drawing.Point(270, 86);
             this.listAlumnosSinAula.Name = "listAlumnosSinAula";
             this.listAlumnosSinAula.Size = new System.Drawing.Size(266, 277);
             this.listAlumnosSinAula.TabIndex = 14;
@@ -162,7 +162,7 @@
             // listProfesoresDisponibles
             // 
             this.listProfesoresDisponibles.FormattingEnabled = true;
-            this.listProfesoresDisponibles.Location = new System.Drawing.Point(515, 86);
+            this.listProfesoresDisponibles.Location = new System.Drawing.Point(542, 86);
             this.listProfesoresDisponibles.Name = "listProfesoresDisponibles";
             this.listProfesoresDisponibles.Size = new System.Drawing.Size(289, 277);
             this.listProfesoresDisponibles.TabIndex = 15;

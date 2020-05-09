@@ -64,11 +64,27 @@ namespace JardinInfantes_Biblioteca
         {
             StringBuilder datos = new StringBuilder();
 
-            
+
             datos.Append(base.ToString());
-            datos.AppendLine($"{this.ColorSala}");
+            if ((int)this.colorSala == 0)
+            {
+                datos.AppendLine("Sin Aula");
+            }
+            else
+            {
+                datos.AppendLine($"{this.ColorSala}");
+            }
+            
             datos.AppendLine($"{this.Legajo}");
-            datos.AppendLine($"{this.Responsable}");
+            if(this.responsable is null)
+            {
+                datos.AppendLine("Sin responsable");
+            }
+            else
+            {
+                datos.AppendLine($"{this.Responsable}");
+            }
+            
             datos.AppendLine($"{this.PrecioCuota}");
             
 

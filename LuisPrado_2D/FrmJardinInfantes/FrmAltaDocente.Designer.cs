@@ -41,10 +41,13 @@
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textDni = new System.Windows.Forms.TextBox();
-            this.textSexo = new System.Windows.Forms.TextBox();
             this.textValorHora = new System.Windows.Forms.TextBox();
             this.textHoraSalida = new System.Windows.Forms.TextBox();
             this.textHoraEntrada = new System.Windows.Forms.TextBox();
+            this.radioFemenino = new System.Windows.Forms.RadioButton();
+            this.radioMasculino = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -153,13 +156,6 @@
             this.textDni.Size = new System.Drawing.Size(132, 20);
             this.textDni.TabIndex = 11;
             // 
-            // textSexo
-            // 
-            this.textSexo.Location = new System.Drawing.Point(175, 125);
-            this.textSexo.Name = "textSexo";
-            this.textSexo.Size = new System.Drawing.Size(132, 20);
-            this.textSexo.TabIndex = 12;
-            // 
             // textValorHora
             // 
             this.textValorHora.Location = new System.Drawing.Point(175, 234);
@@ -181,16 +177,48 @@
             this.textHoraEntrada.Size = new System.Drawing.Size(132, 20);
             this.textHoraEntrada.TabIndex = 13;
             // 
+            // radioFemenino
+            // 
+            this.radioFemenino.AutoSize = true;
+            this.radioFemenino.Checked = true;
+            this.radioFemenino.Location = new System.Drawing.Point(22, 19);
+            this.radioFemenino.Name = "radioFemenino";
+            this.radioFemenino.Size = new System.Drawing.Size(71, 17);
+            this.radioFemenino.TabIndex = 16;
+            this.radioFemenino.TabStop = true;
+            this.radioFemenino.Text = "Femenino";
+            this.radioFemenino.UseVisualStyleBackColor = true;
+            // 
+            // radioMasculino
+            // 
+            this.radioMasculino.AutoSize = true;
+            this.radioMasculino.Location = new System.Drawing.Point(111, 19);
+            this.radioMasculino.Name = "radioMasculino";
+            this.radioMasculino.Size = new System.Drawing.Size(73, 17);
+            this.radioMasculino.TabIndex = 17;
+            this.radioMasculino.Text = "Masculino";
+            this.radioMasculino.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioMasculino);
+            this.groupBox1.Controls.Add(this.radioFemenino);
+            this.groupBox1.Location = new System.Drawing.Point(138, 116);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(216, 38);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            // 
             // FrmAltaDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(351, 353);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textValorHora);
             this.Controls.Add(this.textHoraSalida);
             this.Controls.Add(this.textHoraEntrada);
-            this.Controls.Add(this.textSexo);
             this.Controls.Add(this.textDni);
             this.Controls.Add(this.textApellido);
             this.Controls.Add(this.textNombre);
@@ -208,6 +236,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de Docente";
             this.Load += new System.EventHandler(this.FrmAltaDocente_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,9 +257,11 @@
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textApellido;
         private System.Windows.Forms.TextBox textDni;
-        private System.Windows.Forms.TextBox textSexo;
         private System.Windows.Forms.TextBox textValorHora;
         private System.Windows.Forms.TextBox textHoraSalida;
         private System.Windows.Forms.TextBox textHoraEntrada;
+        private System.Windows.Forms.RadioButton radioFemenino;
+        private System.Windows.Forms.RadioButton radioMasculino;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

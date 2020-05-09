@@ -28,99 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.textPrecio = new System.Windows.Forms.TextBox();
+            this.textDni = new System.Windows.Forms.TextBox();
+            this.textApellido = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.grupoSexo = new System.Windows.Forms.GroupBox();
+            this.radioMasculino = new System.Windows.Forms.RadioButton();
+            this.radioFemenino = new System.Windows.Forms.RadioButton();
+            this.grupoSexo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox6
+            // textPrecio
             // 
-            this.textBox6.Location = new System.Drawing.Point(177, 240);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 20);
-            this.textBox6.TabIndex = 31;
+            this.textPrecio.Location = new System.Drawing.Point(177, 166);
+            this.textPrecio.Name = "textPrecio";
+            this.textPrecio.Size = new System.Drawing.Size(132, 20);
+            this.textPrecio.TabIndex = 29;
             // 
-            // textBox7
+            // textDni
             // 
-            this.textBox7.Location = new System.Drawing.Point(177, 204);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(132, 20);
-            this.textBox7.TabIndex = 30;
+            this.textDni.Location = new System.Drawing.Point(177, 96);
+            this.textDni.Name = "textDni";
+            this.textDni.Size = new System.Drawing.Size(132, 20);
+            this.textDni.TabIndex = 27;
             // 
-            // textBox8
+            // textApellido
             // 
-            this.textBox8.Location = new System.Drawing.Point(177, 166);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(132, 20);
-            this.textBox8.TabIndex = 29;
+            this.textApellido.Location = new System.Drawing.Point(177, 60);
+            this.textApellido.Name = "textApellido";
+            this.textApellido.Size = new System.Drawing.Size(132, 20);
+            this.textApellido.TabIndex = 26;
             // 
-            // textBox4
+            // textNombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(177, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 20);
-            this.textBox4.TabIndex = 28;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(177, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 27;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(177, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 26;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(177, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 25;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 247);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Valor por Hora";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Hora de Salida";
+            this.textNombre.Location = new System.Drawing.Point(177, 22);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(132, 20);
+            this.textNombre.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(42, 173);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
+            this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Hora de Entrada";
+            this.label5.Text = "Precio Cuota";
             // 
             // label4
             // 
@@ -158,74 +118,103 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Nombre";
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(215, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancelar.Location = new System.Drawing.Point(215, 229);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAceptar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(45, 301);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAceptar.Location = new System.Drawing.Point(45, 229);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
+            this.btnAceptar.TabIndex = 16;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // grupoSexo
+            // 
+            this.grupoSexo.Controls.Add(this.radioMasculino);
+            this.grupoSexo.Controls.Add(this.radioFemenino);
+            this.grupoSexo.Location = new System.Drawing.Point(123, 122);
+            this.grupoSexo.Name = "grupoSexo";
+            this.grupoSexo.Size = new System.Drawing.Size(216, 38);
+            this.grupoSexo.TabIndex = 32;
+            this.grupoSexo.TabStop = false;
+            // 
+            // radioMasculino
+            // 
+            this.radioMasculino.AutoSize = true;
+            this.radioMasculino.Location = new System.Drawing.Point(111, 19);
+            this.radioMasculino.Name = "radioMasculino";
+            this.radioMasculino.Size = new System.Drawing.Size(73, 17);
+            this.radioMasculino.TabIndex = 17;
+            this.radioMasculino.Text = "Masculino";
+            this.radioMasculino.UseVisualStyleBackColor = true;
+            // 
+            // radioFemenino
+            // 
+            this.radioFemenino.AutoSize = true;
+            this.radioFemenino.Checked = true;
+            this.radioFemenino.Location = new System.Drawing.Point(22, 19);
+            this.radioFemenino.Name = "radioFemenino";
+            this.radioFemenino.Size = new System.Drawing.Size(71, 17);
+            this.radioFemenino.TabIndex = 16;
+            this.radioFemenino.TabStop = true;
+            this.radioFemenino.Text = "Femenino";
+            this.radioFemenino.UseVisualStyleBackColor = true;
             // 
             // FrmAltaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(351, 339);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(351, 277);
+            this.Controls.Add(this.grupoSexo);
+            this.Controls.Add(this.textPrecio);
+            this.Controls.Add(this.textDni);
+            this.Controls.Add(this.textApellido);
+            this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAceptar);
             this.Name = "FrmAltaAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAltaAlumno";
+            this.Load += new System.EventHandler(this.FrmAltaAlumno_Load);
+            this.grupoSexo.ResumeLayout(false);
+            this.grupoSexo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textPrecio;
+        private System.Windows.Forms.TextBox textDni;
+        private System.Windows.Forms.TextBox textApellido;
+        private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.GroupBox grupoSexo;
+        private System.Windows.Forms.RadioButton radioMasculino;
+        private System.Windows.Forms.RadioButton radioFemenino;
     }
 }

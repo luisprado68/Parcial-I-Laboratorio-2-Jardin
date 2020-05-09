@@ -16,14 +16,16 @@ namespace FrmJardinInfantes
         FrmAltaDocente frmDocente;
         FrmAltaAlumno frmAlumno;
         FrmAula frmAula;
+        public bool nuevoDocente;
+        public bool nuevoAlumno;
 
-        List<Docente> docentes;
+
 
         public FrmPrincipal()
         {
             InitializeComponent();
-            docentes = new List<Docente>();
-
+            nuevoDocente = false;
+            nuevoAlumno = false;
            
         }
 
@@ -32,25 +34,7 @@ namespace FrmJardinInfantes
             
         }
 
-        public bool AgregarDocente(Docente docente)
-        {
-            bool esIgual=false;
-            foreach (Docente item in this.docentes)
-            {
-                if(item.Dni == docente.Dni)
-                {
-                    esIgual = true;
-                }
-            }
-
-            if (!esIgual)
-            {
-                docentes.Add(docente);
-                return true;
-            }
-
-            return false;
-        }
+       
 
        
 
@@ -59,17 +43,19 @@ namespace FrmJardinInfantes
         {
             frmDocente = new FrmAltaDocente();
             frmDocente.ShowDialog();
+            nuevoDocente = true;
 
             
 
             if (frmDocente.DialogResult == DialogResult.OK)
             {
-                MessageBox.Show("El Cliente fue agregado satisfactoriamente",
+                MessageBox.Show("El Docente fue agregado satisfactoriamente",
                                              "Confirmacion",
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Information);
-               //agrego el docente pasado por objeto formulario docente
-                AgregarDocente(frmDocente.docente);
+                //agrego el docente pasado por objeto formulario docente
+               
+               
             }
 
 
@@ -81,12 +67,52 @@ namespace FrmJardinInfantes
         {
             frmAlumno = new FrmAltaAlumno();
             frmAlumno.ShowDialog();
+            nuevoAlumno = true;
+
+            if (frmAlumno.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("El Alumno fue agregado satisfactoriamente",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+                
+
+
+            }
         }
 
         private void altaAulaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAula = new FrmAula();
-            frmAula.ShowDialog();
+            //si se creo un nuevo docente lo agrega
+            if (nuevoDocente==false && nuevoAlumno==true)
+            {
+                frmAula = new FrmAula(frmAlumno.unAlumno);
+
+
+                frmAula.ShowDialog();
+            }
+            else if (nuevoDocente== true && nuevoAlumno == false)
+            {
+                frmAula = new FrmAula(frmDocente.docente);
+
+
+                frmAula.ShowDialog();
+            }else if (nuevoDocente && nuevoAlumno )
+            {
+                frmAula = new FrmAula(frmDocente.docente,frmAlumno.unAlumno);
+
+
+                frmAula.ShowDialog();
+            }
+            else
+            {
+                frmAula = new FrmAula();
+
+
+                frmAula.ShowDialog(); 
+
+            }
+           
         }
 
        

@@ -24,10 +24,10 @@ namespace JardinInfantes_Biblioteca
 
     public enum Ecolor
     {
-        Naranja,
-        Rojo,
-        Amarillo,
-        Verde
+        Naranja=1,
+        Rojo=2,
+        Amarillo=3,
+        Verde=4
     }
 
     public enum ECargo

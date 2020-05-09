@@ -15,6 +15,8 @@ namespace ConsoleApp1
 
             //ALTA DOCENTE
 
+            int horaEntrada;
+            int horaSalida;
             Docente do1 = new Docente("Lucas", "Rodriguez", 100, false, new DateTime(1, 1, 1, 10, 0, 0), new DateTime(1, 1, 1, 18, 0, 0), 220);
             Docente do2 = new Docente("Ezquiel", "Oggins", 101, false, new DateTime(1, 1, 1, 10, 0, 0), new DateTime(1, 1, 1, 18, 0, 0), 220);
             Docente do3 = new Docente("Martina", "Lopez", 102, true, new DateTime(1, 1, 1, 10, 0, 0), new DateTime(1, 1, 1, 18, 0, 0), 220);
