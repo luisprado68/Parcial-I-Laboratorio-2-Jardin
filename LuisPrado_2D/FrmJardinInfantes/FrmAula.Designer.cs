@@ -37,12 +37,15 @@
             this.cmbTurno = new System.Windows.Forms.ComboBox();
             this.cmbProfesor = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnGuardarAula = new System.Windows.Forms.Button();
             this.listAlumnosSala = new System.Windows.Forms.ListBox();
             this.listAlumnosSinAula = new System.Windows.Forms.ListBox();
             this.listProfesoresDisponibles = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbProfesor = new System.Windows.Forms.Label();
+            this.lbProfeAula = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -133,15 +136,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnGuardarAula
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(682, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 31);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGuardarAula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarAula.Location = new System.Drawing.Point(771, 376);
+            this.btnGuardarAula.Name = "btnGuardarAula";
+            this.btnGuardarAula.Size = new System.Drawing.Size(83, 31);
+            this.btnGuardarAula.TabIndex = 11;
+            this.btnGuardarAula.Text = "Guardar";
+            this.btnGuardarAula.UseVisualStyleBackColor = true;
+            this.btnGuardarAula.Click += new System.EventHandler(this.btnGuardarAula_Click);
             // 
             // listAlumnosSala
             // 
@@ -154,17 +158,17 @@
             // listAlumnosSinAula
             // 
             this.listAlumnosSinAula.FormattingEnabled = true;
-            this.listAlumnosSinAula.Location = new System.Drawing.Point(270, 86);
+            this.listAlumnosSinAula.Location = new System.Drawing.Point(285, 86);
             this.listAlumnosSinAula.Name = "listAlumnosSinAula";
-            this.listAlumnosSinAula.Size = new System.Drawing.Size(266, 277);
+            this.listAlumnosSinAula.Size = new System.Drawing.Size(321, 277);
             this.listAlumnosSinAula.TabIndex = 14;
             // 
             // listProfesoresDisponibles
             // 
             this.listProfesoresDisponibles.FormattingEnabled = true;
-            this.listProfesoresDisponibles.Location = new System.Drawing.Point(542, 86);
+            this.listProfesoresDisponibles.Location = new System.Drawing.Point(623, 86);
             this.listProfesoresDisponibles.Name = "listProfesoresDisponibles";
-            this.listProfesoresDisponibles.Size = new System.Drawing.Size(289, 277);
+            this.listProfesoresDisponibles.Size = new System.Drawing.Size(313, 277);
             this.listProfesoresDisponibles.TabIndex = 15;
             this.listProfesoresDisponibles.SelectedIndexChanged += new System.EventHandler(this.listProfesoresDisponibles_SelectedIndexChanged);
             // 
@@ -180,24 +184,55 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(512, 70);
+            this.label7.Location = new System.Drawing.Point(636, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(265, 13);
             this.label7.TabIndex = 17;
             this.label7.Text = "Nombre-Apellido-DNI-Hora Entrada-Hora Salida-Salario";
+            // 
+            // lbProfesor
+            // 
+            this.lbProfesor.AutoSize = true;
+            this.lbProfesor.Location = new System.Drawing.Point(12, 70);
+            this.lbProfesor.Name = "lbProfesor";
+            this.lbProfesor.Size = new System.Drawing.Size(35, 13);
+            this.lbProfesor.TabIndex = 18;
+            this.lbProfesor.Text = "Profe:";
+            // 
+            // lbProfeAula
+            // 
+            this.lbProfeAula.AutoSize = true;
+            this.lbProfeAula.Location = new System.Drawing.Point(59, 70);
+            this.lbProfeAula.Name = "lbProfeAula";
+            this.lbProfeAula.Size = new System.Drawing.Size(0, 13);
+            this.lbProfeAula.TabIndex = 19;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Location = new System.Drawing.Point(650, 376);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 31);
+            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(833, 410);
+            this.ClientSize = new System.Drawing.Size(948, 410);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.lbProfeAula);
+            this.Controls.Add(this.lbProfesor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.listProfesoresDisponibles);
             this.Controls.Add(this.listAlumnosSinAula);
             this.Controls.Add(this.listAlumnosSala);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGuardarAula);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbProfesor);
             this.Controls.Add(this.cmbTurno);
@@ -227,11 +262,14 @@
         private System.Windows.Forms.ComboBox cmbTurno;
         private System.Windows.Forms.ComboBox cmbProfesor;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGuardarAula;
         private System.Windows.Forms.ListBox listAlumnosSala;
         private System.Windows.Forms.ListBox listAlumnosSinAula;
         private System.Windows.Forms.ListBox listProfesoresDisponibles;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbProfesor;
+        private System.Windows.Forms.Label lbProfeAula;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

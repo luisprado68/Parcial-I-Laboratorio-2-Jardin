@@ -26,11 +26,12 @@ namespace FrmJardinInfantes
             InitializeComponent();
             nuevoDocente = false;
             nuevoAlumno = false;
-           
+            frmAula = new FrmAula();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            this.MostrarAulas(frmAula.Aulas);
             
         }
 
@@ -112,9 +113,20 @@ namespace FrmJardinInfantes
                 frmAula.ShowDialog(); 
 
             }
+
+
+
+
+
            
         }
-
-       
+        // muestro las aulas actuales
+        public void MostrarAulas(List<Aula> aulas)
+        {
+            foreach ( Aula item in aulas)
+            {
+                this.listAulasActuales.Items.Add(item.ToString());
+            }
+        }
     }
 }
