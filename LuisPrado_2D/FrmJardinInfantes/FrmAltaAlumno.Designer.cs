@@ -42,6 +42,8 @@
             this.grupoSexo = new System.Windows.Forms.GroupBox();
             this.radioMasculino = new System.Windows.Forms.RadioButton();
             this.radioFemenino = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbParintes = new System.Windows.Forms.ComboBox();
             this.grupoSexo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,7 +124,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancelar.Location = new System.Drawing.Point(215, 229);
+            this.btnCancelar.Location = new System.Drawing.Point(214, 236);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 29);
             this.btnCancelar.TabIndex = 17;
@@ -133,7 +135,7 @@
             // btnAceptar
             // 
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptar.Location = new System.Drawing.Point(45, 229);
+            this.btnAceptar.Location = new System.Drawing.Point(45, 236);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(94, 29);
             this.btnAceptar.TabIndex = 16;
@@ -173,12 +175,31 @@
             this.radioFemenino.Text = "Femenino";
             this.radioFemenino.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(42, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Pariente";
+            // 
+            // cmbParintes
+            // 
+            this.cmbParintes.FormattingEnabled = true;
+            this.cmbParintes.Location = new System.Drawing.Point(177, 201);
+            this.cmbParintes.Name = "cmbParintes";
+            this.cmbParintes.Size = new System.Drawing.Size(131, 21);
+            this.cmbParintes.TabIndex = 34;
+            // 
             // FrmAltaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(351, 277);
+            this.Controls.Add(this.cmbParintes);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.grupoSexo);
             this.Controls.Add(this.textPrecio);
             this.Controls.Add(this.textDni);
@@ -217,5 +238,7 @@
         private System.Windows.Forms.GroupBox grupoSexo;
         private System.Windows.Forms.RadioButton radioMasculino;
         private System.Windows.Forms.RadioButton radioFemenino;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbParintes;
     }
 }

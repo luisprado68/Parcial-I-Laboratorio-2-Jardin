@@ -48,6 +48,8 @@ namespace ConsoleApp1
             Console.WriteLine(res4.ToString());
             Console.WriteLine(res5.ToString());
 
+            
+
             // Alta administrativo
             Console.WriteLine("*****************Administrativos*****************");
             Administrativo admin = new Administrativo("Luis", "Prado", 150, false, new DateTime(1, 1, 1, 10, 0, 0), new DateTime(1, 1, 1, 10, 0, 0),ECargo.Secretaria);
@@ -63,8 +65,9 @@ namespace ConsoleApp1
             Alumno al3 = new Alumno("Laura", "Prado", 1003, true, 25000);
             Alumno al4 = new Alumno("Mateo", "Stigliano", 1004, false, 25000);
             Alumno al5 = new Alumno("Mauricio", "Garcia", 1005, false, 25000);
+           
 
-
+            Responsable nuevo = al1;
 
             Console.WriteLine(al1.ToString());
             Console.WriteLine(al2.ToString());

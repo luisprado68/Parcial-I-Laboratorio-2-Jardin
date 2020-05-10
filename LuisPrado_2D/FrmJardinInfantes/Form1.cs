@@ -13,11 +13,13 @@ namespace FrmJardinInfantes
 {
     public partial class FrmPrincipal : Form
     {
+        FrmResponsable frmResponsable;
         FrmAltaDocente frmDocente;
         FrmAltaAlumno frmAlumno;
         FrmAula frmAula;
         public bool nuevoDocente;
         public bool nuevoAlumno;
+        public bool nuevoRespon;
 
 
 
@@ -30,8 +32,9 @@ namespace FrmJardinInfantes
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            this.MostrarAulas(frmAula.Aulas);
+        {   
+            
+           
             
         }
 
@@ -66,7 +69,15 @@ namespace FrmJardinInfantes
 
         private void altaAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAlumno = new FrmAltaAlumno();
+            if (nuevoRespon)
+            {
+                frmAlumno = new FrmAltaAlumno(frmResponsable.responsable);
+               
+            }
+            else
+            {
+                frmAlumno = new FrmAltaAlumno();
+            }
             frmAlumno.ShowDialog();
             nuevoAlumno = true;
 
@@ -120,12 +131,23 @@ namespace FrmJardinInfantes
 
            
         }
-        // muestro las aulas actuales
-        public void MostrarAulas(List<Aula> aulas)
+
+
+        private void altaNoDocenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach ( Aula item in aulas)
+            frmResponsable = new FrmResponsable();
+            frmResponsable.ShowDialog();
+            nuevoRespon = true;
+
+            if (frmResponsable.DialogResult == DialogResult.OK)
             {
-                this.listAulasActuales.Items.Add(item.ToString());
+                MessageBox.Show("El Pariente fue agregado satisfactoriamente",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+                
+
             }
         }
     }

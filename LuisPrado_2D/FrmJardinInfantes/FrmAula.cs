@@ -96,7 +96,7 @@ namespace FrmJardinInfantes
 
         private void FrmAula_Load(object sender, EventArgs e)
         {
-
+            MostrarAulas(this.aulas);
 
             
 
@@ -264,20 +264,28 @@ namespace FrmJardinInfantes
             
         }
 
-       //agrego un docente de la lista de  docentes  a la de  un aula.
-        //public void AgregarDocentesAula(Aula aula, Docente docente)
-        //{
-        //   aula= new Aula()
-        //}
+     
 
 
         //boton actualizar
         private void button1_Click(object sender, EventArgs e)
         {
             bool encontroAula = false;
-            
-            // dependiedo del color cambia el form. y muestra los alumnos en la sala
-            if (this.cmbColor.SelectedIndex + 1 == (int)Ecolor.Naranja)
+
+            if (this.cmbColor.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para actualizar aula");
+
+            }
+            else if (this.cmbTurno.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para actualizar aula");
+            }
+            else if (this.cmbProfesor.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para actualizar aula");
+            }
+            else if (this.cmbColor.SelectedIndex + 1 == (int)Ecolor.Naranja)
             {
                 
                 for (int i = 0; i < this.aulas.Count; i++)
@@ -286,10 +294,11 @@ namespace FrmJardinInfantes
                     if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString()==this.aulas[i].ColorSala.ToString())
                     {
                         this.BackColor = Color.Orange;
-
+                       
                         this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
                         AgregarAulaList(this.aulas[i]);
+                        MostrarAulas(this.aulas);
                     }
                 }
 
@@ -312,6 +321,7 @@ namespace FrmJardinInfantes
                         this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
                         AgregarAulaList(this.aulas[i]);
+                        MostrarAulas(this.aulas);
                     }
                 }
 
@@ -334,6 +344,7 @@ namespace FrmJardinInfantes
                         this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
                         AgregarAulaList(this.aulas[i]);
+                        MostrarAulas(this.aulas);
                     }
                 }
                 if (!encontroAula)
@@ -354,6 +365,7 @@ namespace FrmJardinInfantes
                         this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
                         AgregarAulaList(this.aulas[i]);
+                        MostrarAulas(this.aulas);
                     }
                 }
                 if (!encontroAula)
@@ -362,10 +374,10 @@ namespace FrmJardinInfantes
                 }
             }
 
-           
 
-           
 
+            //al final miuestro las lista de aulas
+           
 
 
         }
@@ -455,12 +467,121 @@ namespace FrmJardinInfantes
 
         private void btnGuardarAula_Click(object sender, EventArgs e)
         {
-            //if()
-            //aula = new Aula()
+
+            Ecolor color;
+            Eturno turno;
+            int posicion = 0;
+           
+            int aula=0;
+            int alumno = 0;
+
+            if (this.cmbColor.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para agregar un alumno");
+
+            }
+            else if (this.cmbTurno.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para agregar un alumno");
+            }
+            else if (this.cmbProfesor.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para agregar un alumno");
+            }
+            else if (this.listAlumnosSinAula.SelectedIndex == -1)
+            {
+                MessageBox.Show("No se eligio ninguna opcion para agregar un alumno");
+            }
+            else
+            {
+                if (this.cmbColor.SelectedItem.ToString() == Ecolor.Amarillo.ToString())
+                {
+                    color = Ecolor.Amarillo;
+
+                }
+                else if (this.cmbColor.SelectedItem.ToString() == Ecolor.Naranja.ToString())
+                {
+                    color = Ecolor.Naranja;
+
+                }
+                else if (this.cmbColor.SelectedItem.ToString() == Ecolor.Rojo.ToString())
+                {
+                    color = Ecolor.Rojo;
+
+                }
+                else
+                {
+                    color = Ecolor.Verde;
+
+                }
+
+
+                if (this.cmbTurno.SelectedItem.ToString() == Eturno.Mañana.ToString())
+                {
+                    turno = Eturno.Mañana;
+
+                }
+                else
+                {
+                    turno = Eturno.Tarde;
+
+                }
+
+
+                //encontarel alumno
+
+                for(int i = 0; i < this.alumnosSinAula.Count; i++)
+                {
+                    if(this.listAlumnosSinAula.SelectedItem.ToString() == this.alumnosSinAula[i].ToString())
+                    {
+                        alumno = i;
+                    }
+                }
+
+
+                //agrego los de la lista de docentes que cuando se agerga un docente se valida que no se repita.
+
+
+                for (int i = 0; i < this.docentes.Count; i++)
+                {
+
+                    if (this.cmbProfesor.SelectedItem.ToString() == this.docentes[i].Nombre+"-"+this.docentes[i].Apellido)
+                    {
+                        posicion = i;
+
+                    }
+
+                }
+
+
+                // encontrar aula actual---
+
+                for (int i=0;i<this.aulas.Count; i++)
+                {
+                    if(this.aulas[i].ColorSala ==color && this.aulas[i].Turno == turno && this.aulas[i].Docente == this.docentes[posicion])
+                    {
+                        aula = i;
+                    }
+                }
+
+                //agrego al aula el alumno seleccionado y encontrado en la lista de alumnos sin aula.
+                if (this.aulas[aula] + this.alumnosSinAula[alumno])
+                {
+                    this.alumnosSinAula.RemoveAt(alumno); ///elimino el alumno de la lista sin asiganar
+                    MessageBox.Show("Alumnos agregado a la sala");
+                    CargarAlumnosSinAula();//actualizo el lista de alunos sin asignar
+                }
+                else
+                {
+                    MessageBox.Show("No se  agregado alumno  a la sala");
+                }
+
+
+            }
 
         }
 
-        
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -497,8 +618,9 @@ namespace FrmJardinInfantes
             if (!esIgual)
             {
                 aula = new Aula(color, turno, docente);
-                aulas.Add(aula);
 
+                aulas.Add(aula);
+                // agrego nueva aula a la lista-----------------------------------------
 
                 return true;
             }
@@ -506,6 +628,8 @@ namespace FrmJardinInfantes
             return false;
 
         }
+
+        
         private void agregarProfesor_Click(object sender, EventArgs e)
         {
            
@@ -562,10 +686,6 @@ namespace FrmJardinInfantes
 
                 }
 
-
-
-
-
                 //agrego los de la lista de docentes que cuando se agerga un docente se valida que no se repita.
 
 
@@ -584,7 +704,7 @@ namespace FrmJardinInfantes
 
                 if (agregarDocenteAula(this.aulas, color, turno, this.docentes[posicion]))
                 {
-                    MessageBox.Show("Se agrego docente a nueva aula");
+                    MessageBox.Show("Se agrego docente a nueva aula creada");
                     AgregarDocentesAula(this.aulas);
                     CargarDocentes(this.docentes, this.aulas);
 
@@ -598,17 +718,26 @@ namespace FrmJardinInfantes
 
             }
 
-
-
-
-
-
-
         }
 
         private void listAlumnosSinAula_MouseMove(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        public void MostrarAulas(List<Aula> aulas)
+        {
+            this.listAulasActuales.Items.Clear();
+            foreach (Aula item in aulas)
+            {
+                this.listAulasActuales.Items.Add(item.ToString());
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\FrmJardinInfantes.exe.config
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\FrmJardinInfantes.exe
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\FrmJardinInfantes.pdb
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\JardinInfantes-Biblioteca.dll
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\JardinInfantes-Biblioteca.pdb
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csprojAssemblyReference.cache
@@ -9,8 +11,7 @@ C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Deb
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.Properties.Resources.resources
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csproj.GenerateResource.cache
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csproj.CoreCompileInputs.cache
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csproj.CopyComplete
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.exe
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.pdb
-C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\FrmJardinInfantes.exe.config
-C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\bin\Debug\FrmJardinInfantes.pdb
-C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.csproj.CopyComplete
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmResponsable.resources

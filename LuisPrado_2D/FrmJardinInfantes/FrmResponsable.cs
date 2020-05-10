@@ -5,61 +5,42 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FrmJardinInfantes
 {
-    public partial class FrmAltaAlumno : Form
+    public partial class FrmResponsable : Form
     {
-        public Alumno unAlumno;
-        Responsable responsable;
+        public  Responsable responsable;
         public List<Responsable> responsables;
-        public FrmAltaAlumno()
+        public FrmResponsable()
         {
             InitializeComponent();
             responsables = new List<Responsable>();
-            this.responsables.Add(new Responsable("Marta", "Ramirez", 2000, true, Eparentezco.Madre, "1550238312"));
         }
 
-        //recibo un parinete creado del form de frm responable
-        public FrmAltaAlumno(Responsable pariente) : this()
+        private void FrmResponsable_Load(object sender, EventArgs e)
         {
-            this.responsable = pariente;
-            this.responsables.Add(this.responsable);
-        }
 
-        private void FrmAltaAlumno_Load(object sender, EventArgs e)
-        {
-            CargarComboParinetes(this.responsables);
         }
-
-        // cargamos la lista al com
-        public void CargarComboParinetes(List<Responsable> lista)
-        {
-            foreach(Responsable item in lista)
-            {
-                this.cmbParintes.Items.Add(item.ToString());
-            }
-        }
-
-        
-        
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (Validaciones.ValidarLetras(this.textNombre.Text) &&
                 Validaciones.ValidarLetras(this.textApellido.Text) &&
                 Validaciones.ValidarEntero(this.textDni.Text, 999999999, 1) &&
-                Validaciones.ValidarDouble(this.textPrecio.Text, 999999999, 1))
-                
+                Validaciones.ValidarParentezco(this.cmbParentezco.SelectedItem.ToString())&&
+                Validaciones.ValidarEntero(this.textTelefono.Text, 999999999, 1))
+
             {
-                
-                unAlumno = new Alumno(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked),float.Parse(textPrecio.Text));
+
+                responsable = new Responsable(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked),Validaciones.pariente(cmbParentezco.SelectedItem.ToString()),this.textTelefono.Text);
 
                 this.DialogResult = DialogResult.OK;
+
+                AgregarResponsableLista(responsable);//a grefo responsable a la lista
             }
             else
             {
@@ -68,9 +49,25 @@ namespace FrmJardinInfantes
 
             }
 
-
         }
 
+        public void AgregarResponsableLista(Responsable responsable)
+        {
+            bool esigual = false;
+            foreach (Responsable item in this.responsables)
+            {
+                if(responsable.Dni == item.Dni)
+                {
+                    esigual = true;
+                }
+            }
+
+            if (!esigual)
+            {
+                responsables.Add(responsable);
+
+            }
+        }
         public static void Limpiar(Form formu)
         {
             // Recorrer todos los controles del formulario
@@ -94,9 +91,6 @@ namespace FrmJardinInfantes
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+        
     }
 }
