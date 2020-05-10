@@ -44,8 +44,21 @@ namespace FrmJardinInfantes
                 this.cmbParintes.Items.Add(item.ToString());
             }
         }
+        //agregamos pariente a alumno elgido del combox
+        public void AgregarPariente(Alumno alumno,string responsable)
+        {
+            int pariente=0;
+           for(int i = 0; i < this.responsables.Count; i++)
+            {
+                if(this.responsables[i].ToString() == responsable)
+                {
+                    pariente = i;
+                    break;
+                }
+            }
 
-        
+            alumno.Responsable = this.responsables[pariente];
+        }
         
 
         private void btnAceptar_Click(object sender, EventArgs e)

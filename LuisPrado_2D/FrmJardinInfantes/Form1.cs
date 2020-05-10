@@ -21,8 +21,6 @@ namespace FrmJardinInfantes
         public bool nuevoAlumno;
         public bool nuevoRespon;
 
-
-
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -38,18 +36,12 @@ namespace FrmJardinInfantes
             
         }
 
-       
-
-       
-
-
         private void altaDocenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDocente = new FrmAltaDocente();
             frmDocente.ShowDialog();
             nuevoDocente = true;
 
-            
 
             if (frmDocente.DialogResult == DialogResult.OK)
             {
@@ -61,9 +53,6 @@ namespace FrmJardinInfantes
                
                
             }
-
-
-
 
         }
 
@@ -125,11 +114,6 @@ namespace FrmJardinInfantes
 
             }
 
-
-
-
-
-           
         }
 
 
