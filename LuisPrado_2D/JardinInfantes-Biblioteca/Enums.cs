@@ -34,7 +34,7 @@ namespace JardinInfantes_Biblioteca
     {
         Portería = 100,
         Cocina = 110,
-        Secretaria = 140,
+        Secretaría = 140,
         Tesorería = 240,
         Dirección = 180
     }

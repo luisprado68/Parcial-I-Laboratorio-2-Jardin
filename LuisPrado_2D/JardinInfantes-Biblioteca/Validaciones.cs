@@ -72,7 +72,37 @@ namespace JardinInfantes_Biblioteca
             }
         }
 
-        public static Eparentezco pariente(string parentezco)
+        public static bool ValidarCargo(string cargo)
+        {
+           
+            
+                if (cargo == ECargo.Cocina.ToString())
+                {
+                    return true;
+                }
+                else if (cargo == ECargo.Dirección.ToString())
+                {
+                    return true;
+                }
+                else if (cargo == ECargo.Portería.ToString())
+                {
+                    return true;
+                }
+                else if (cargo == ECargo.Secretaría.ToString())
+                {
+                     return true;
+                }
+                else if(cargo == ECargo.Tesorería.ToString())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            
+        }
+        public static Eparentezco RetornoParentezco(string parentezco)
         {
             if (parentezco == Eparentezco.Abuela.ToString())
             {

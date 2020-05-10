@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbSueldoNoDocente = new System.Windows.Forms.Label();
-            this.richInfoPadres = new System.Windows.Forms.RichTextBox();
+            this.richSuedoNoDocente = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lbSueldoNoDocente
@@ -42,13 +42,13 @@
             this.lbSueldoNoDocente.TabIndex = 3;
             this.lbSueldoNoDocente.Text = "Sueldo No Docente";
             // 
-            // richInfoPadres
+            // richSuedoNoDocente
             // 
-            this.richInfoPadres.Location = new System.Drawing.Point(12, 57);
-            this.richInfoPadres.Name = "richInfoPadres";
-            this.richInfoPadres.Size = new System.Drawing.Size(401, 274);
-            this.richInfoPadres.TabIndex = 2;
-            this.richInfoPadres.Text = "";
+            this.richSuedoNoDocente.Location = new System.Drawing.Point(12, 57);
+            this.richSuedoNoDocente.Name = "richSuedoNoDocente";
+            this.richSuedoNoDocente.Size = new System.Drawing.Size(401, 274);
+            this.richSuedoNoDocente.TabIndex = 2;
+            this.richSuedoNoDocente.Text = "";
             // 
             // FrmSueldoNoDocente
             // 
@@ -56,9 +56,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 450);
             this.Controls.Add(this.lbSueldoNoDocente);
-            this.Controls.Add(this.richInfoPadres);
+            this.Controls.Add(this.richSuedoNoDocente);
             this.Name = "FrmSueldoNoDocente";
             this.Text = "Suldo de No Docente";
+            this.Load += new System.EventHandler(this.FrmSueldoNoDocente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,6 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Label lbSueldoNoDocente;
-        private System.Windows.Forms.RichTextBox richInfoPadres;
+        private System.Windows.Forms.RichTextBox richSuedoNoDocente;
     }
 }

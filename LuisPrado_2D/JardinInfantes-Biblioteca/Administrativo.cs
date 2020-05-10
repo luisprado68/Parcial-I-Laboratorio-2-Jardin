@@ -42,9 +42,9 @@ namespace JardinInfantes_Biblioteca
             {
                 return resultado = Administrativo.salarioBase * (double)ECargo.Cocina / 100;
             }
-            else if (this.cargo == ECargo.Secretaria)
+            else if (this.cargo == ECargo.Secretaría)
             {
-                return resultado = Administrativo.salarioBase * (double)ECargo.Secretaria / 100;
+                return resultado = Administrativo.salarioBase * (double)ECargo.Secretaría / 100;
             }
             else if (this.cargo == ECargo.Tesorería)
             {

@@ -17,21 +17,32 @@ namespace FrmJardinInfantes
         FrmAltaDocente frmDocente;
         FrmAltaAlumno frmAlumno;
         FrmAula frmAula;
+        FrmAdministrativo frmAdministrativo;
+        
 
         FrmInfoPadres infoPadres;
         FrmSueldoDocente frmSueldoDocente;
+        FrmSueldoNoDocente frmSueldoNoDocente;
         FrmSueldoAula frmSueldoAula;
         FrmRecaudacionJardin frmRecaudacionJardin;
         public bool nuevoDocente;
         public bool nuevoAlumno;
         public bool nuevoRespon;
+        public bool nuevoAdmin;
+
+
+
+
+       
 
         public FrmPrincipal()
         {
             InitializeComponent();
+           
+
             nuevoDocente = false;
             nuevoAlumno = false;
-          
+            nuevoAdmin = false;
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -124,20 +135,7 @@ namespace FrmJardinInfantes
 
         private void altaNoDocenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmResponsable = new FrmResponsable();
-            frmResponsable.ShowDialog();
-            nuevoRespon = true;
-
-            if (frmResponsable.DialogResult == DialogResult.OK)
-            {
-                MessageBox.Show("El Pariente fue agregado satisfactoriamente",
-                                             "Confirmacion",
-                                             MessageBoxButtons.OK,
-                                             MessageBoxIcon.Information);
-
-                
-
-            }
+           
         }
 
         private void informaciónPadresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -176,11 +174,8 @@ namespace FrmJardinInfantes
             }
         }
 
-        private void sueldoNoDocenteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        
         private void recaudaciónPorAulaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSueldoAula = new FrmSueldoAula();
@@ -204,6 +199,73 @@ namespace FrmJardinInfantes
 
             frmRecaudacionJardin.Show();
             if (frmRecaudacionJardin.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+
+
+            }
+        }
+
+        private void responsableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmResponsable = new FrmResponsable();
+            frmResponsable.ShowDialog();
+            nuevoRespon = true;
+
+            if (frmResponsable.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("El Pariente fue agregado satisfactoriamente",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+
+
+            }
+        }
+
+        private void administrativoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdministrativo = new FrmAdministrativo();
+            nuevoAdmin = true;
+            frmAdministrativo.ShowDialog();
+
+
+            if (frmAdministrativo.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("Personal no docente agregado con exito",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+               
+
+
+            }
+        }
+
+        
+
+        private void sueldoNoDocenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (nuevoAdmin)
+            {
+                frmSueldoNoDocente = new FrmSueldoNoDocente(this.frmAdministrativo.Admin);
+                
+
+
+                
+            }
+            else
+            {
+                frmSueldoNoDocente = new FrmSueldoNoDocente();
+            }
+                frmSueldoNoDocente.ShowDialog();
+            if (frmSueldoNoDocente.DialogResult == DialogResult.OK)
             {
                 MessageBox.Show("",
                                              "Confirmacion",

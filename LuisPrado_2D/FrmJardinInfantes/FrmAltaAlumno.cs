@@ -60,7 +60,23 @@ namespace FrmJardinInfantes
             return this.responsables[pariente];
            
         }
-        
+
+        public Responsable RetornoParentezco(string responsable)
+        {
+            int pariente = 0;
+
+            for (int i = 0; i < this.responsables.Count; i++)
+            {
+                if (this.responsables[i].ToString() == responsable)
+                {
+                    pariente = i;
+                    break;
+                }
+            }
+            return this.responsables[pariente];
+
+        }
+
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {

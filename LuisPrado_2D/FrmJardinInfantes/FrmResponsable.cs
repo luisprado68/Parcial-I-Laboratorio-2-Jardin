@@ -36,7 +36,7 @@ namespace FrmJardinInfantes
 
             {
 
-                responsable = new Responsable(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked),Validaciones.pariente(cmbParentezco.SelectedItem.ToString()),this.textTelefono.Text);
+                responsable = new Responsable(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked),Validaciones.RetornoParentezco(cmbParentezco.SelectedItem.ToString()),this.textTelefono.Text);
 
                 this.DialogResult = DialogResult.OK;
 

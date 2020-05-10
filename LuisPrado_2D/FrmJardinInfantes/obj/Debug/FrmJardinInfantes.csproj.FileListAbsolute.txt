@@ -20,3 +20,4 @@ C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Deb
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmRecaudacionJardin.resources
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmSueldoAula.resources
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmSueldoNoDocente.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmAdministrativo.resources

@@ -42,6 +42,8 @@
             this.sueldoNoDocenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recaudaciónPorAulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recaudaciónTotalDeJardinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.responsableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrativoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fondo = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
@@ -73,35 +75,38 @@
             // altaDocenteToolStripMenuItem
             // 
             this.altaDocenteToolStripMenuItem.Name = "altaDocenteToolStripMenuItem";
-            this.altaDocenteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.altaDocenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaDocenteToolStripMenuItem.Text = "Alta Docente";
             this.altaDocenteToolStripMenuItem.Click += new System.EventHandler(this.altaDocenteToolStripMenuItem_Click);
             // 
             // altaNoDocenteToolStripMenuItem
             // 
+            this.altaNoDocenteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.responsableToolStripMenuItem,
+            this.administrativoToolStripMenuItem});
             this.altaNoDocenteToolStripMenuItem.Name = "altaNoDocenteToolStripMenuItem";
-            this.altaNoDocenteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.altaNoDocenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaNoDocenteToolStripMenuItem.Text = "Alta No Docente";
             this.altaNoDocenteToolStripMenuItem.Click += new System.EventHandler(this.altaNoDocenteToolStripMenuItem_Click);
             // 
             // altaAlumnoToolStripMenuItem
             // 
             this.altaAlumnoToolStripMenuItem.Name = "altaAlumnoToolStripMenuItem";
-            this.altaAlumnoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.altaAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaAlumnoToolStripMenuItem.Text = "Alta Alumno";
             this.altaAlumnoToolStripMenuItem.Click += new System.EventHandler(this.altaAlumnoToolStripMenuItem_Click);
             // 
             // altaAulaToolStripMenuItem
             // 
             this.altaAulaToolStripMenuItem.Name = "altaAulaToolStripMenuItem";
-            this.altaAulaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.altaAulaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaAulaToolStripMenuItem.Text = "Alta Aula";
             this.altaAulaToolStripMenuItem.Click += new System.EventHandler(this.altaAulaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // reporteToolStripMenuItem
@@ -150,6 +155,20 @@
             this.recaudaciónTotalDeJardinToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.recaudaciónTotalDeJardinToolStripMenuItem.Text = "Recaudación Total de Jardin";
             this.recaudaciónTotalDeJardinToolStripMenuItem.Click += new System.EventHandler(this.recaudaciónTotalDeJardinToolStripMenuItem_Click);
+            // 
+            // responsableToolStripMenuItem
+            // 
+            this.responsableToolStripMenuItem.Name = "responsableToolStripMenuItem";
+            this.responsableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.responsableToolStripMenuItem.Text = "Responsable";
+            this.responsableToolStripMenuItem.Click += new System.EventHandler(this.responsableToolStripMenuItem_Click);
+            // 
+            // administrativoToolStripMenuItem
+            // 
+            this.administrativoToolStripMenuItem.Name = "administrativoToolStripMenuItem";
+            this.administrativoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.administrativoToolStripMenuItem.Text = "Administrativo";
+            this.administrativoToolStripMenuItem.Click += new System.EventHandler(this.administrativoToolStripMenuItem_Click);
             // 
             // fondo
             // 
@@ -201,6 +220,8 @@
         private System.Windows.Forms.ToolStripMenuItem recaudaciónPorAulaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recaudaciónTotalDeJardinToolStripMenuItem;
         private System.Windows.Forms.PictureBox fondo;
+        private System.Windows.Forms.ToolStripMenuItem responsableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrativoToolStripMenuItem;
     }
 }
 
