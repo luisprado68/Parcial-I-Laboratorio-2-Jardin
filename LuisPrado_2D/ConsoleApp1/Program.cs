@@ -60,54 +60,54 @@ namespace ConsoleApp1
             // alta Alumno..
 
             Console.WriteLine("*****************Lista de Alumnos*****************");
-            Alumno al1 = new Alumno("Luis", "Prado", 1000, false, 25000);
-            Alumno al2 = new Alumno("Maria", "Prado", 1002, true, 25000);
-            Alumno al3 = new Alumno("Laura", "Prado", 1003, true, 25000);
-            Alumno al4 = new Alumno("Mateo", "Stigliano", 1004, false, 25000);
-            Alumno al5 = new Alumno("Mauricio", "Garcia", 1005, false, 25000);
+            //Alumno al1 = new Alumno("Luis", "Prado", 1000, false, 25000);
+            //Alumno al2 = new Alumno("Maria", "Prado", 1002, true, 25000);
+            //Alumno al3 = new Alumno("Laura", "Prado", 1003, true, 25000);
+            //Alumno al4 = new Alumno("Mateo", "Stigliano", 1004, false, 25000);
+            //Alumno al5 = new Alumno("Mauricio", "Garcia", 1005, false, 25000);
            
 
-            Responsable nuevo = al1;
+            //Responsable nuevo = al1;
 
-            Console.WriteLine(al1.ToString());
-            Console.WriteLine(al2.ToString());
-            Console.WriteLine(al3.ToString());
-            Console.WriteLine(al4.ToString());
-            Console.WriteLine(al5.ToString());
+            //Console.WriteLine(al1.ToString());
+            //Console.WriteLine(al2.ToString());
+            //Console.WriteLine(al3.ToString());
+            //Console.WriteLine(al4.ToString());
+            //Console.WriteLine(al5.ToString());
 
 
-            // Alta Aula...
+            //// Alta Aula...
 
-            Console.WriteLine("*****************Aula*****************");
-            Aula a = new Aula(Ecolor.Amarillo, Eturno.Mañana, do1);
+            //Console.WriteLine("*****************Aula*****************");
+            //Aula a = new Aula(Ecolor.Amarillo, Eturno.Mañana, do1);
 
-            if (a + al1)
-            {
-                Console.WriteLine("Se agrego alumno a aula");
-            }
-            else
-            {
-                Console.WriteLine("No se agrego alumno a aula");
-            }
+            //if (a + al1)
+            //{
+            //    Console.WriteLine("Se agrego alumno a aula");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No se agrego alumno a aula");
+            //}
 
-            if (a + al1)
-            {
-                Console.WriteLine("Se agrego alumno a aula");
-            }
-            else
-            {
-                Console.WriteLine("No se agrego alumno a aula");
-            }
+            //if (a + al1)
+            //{
+            //    Console.WriteLine("Se agrego alumno a aula");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No se agrego alumno a aula");
+            //}
 
-            if (a + al2)
-            {
-                Console.WriteLine("Se agrego alumno a aula");
-            }
-            else
-            {
-                Console.WriteLine("No se agrego alumno a aula");
-            }
-            Console.WriteLine(a.ToString());
+            //if (a + al2)
+            //{
+            //    Console.WriteLine("Se agrego alumno a aula");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No se agrego alumno a aula");
+            //}
+            //Console.WriteLine(a.ToString());
 
 
 

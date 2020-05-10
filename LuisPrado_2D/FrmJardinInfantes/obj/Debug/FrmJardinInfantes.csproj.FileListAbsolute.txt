@@ -15,3 +15,8 @@ C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Deb
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.exe
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.pdb
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmResponsable.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmInfoPadres.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmSueldoDocente.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmRecaudacionJardin.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmSueldoAula.resources
+C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\FrmJardinInfantes\obj\Debug\FrmJardinInfantes.FrmSueldoNoDocente.resources

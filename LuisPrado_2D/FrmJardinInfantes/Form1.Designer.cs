@@ -73,35 +73,35 @@
             // altaDocenteToolStripMenuItem
             // 
             this.altaDocenteToolStripMenuItem.Name = "altaDocenteToolStripMenuItem";
-            this.altaDocenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaDocenteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.altaDocenteToolStripMenuItem.Text = "Alta Docente";
             this.altaDocenteToolStripMenuItem.Click += new System.EventHandler(this.altaDocenteToolStripMenuItem_Click);
             // 
             // altaNoDocenteToolStripMenuItem
             // 
             this.altaNoDocenteToolStripMenuItem.Name = "altaNoDocenteToolStripMenuItem";
-            this.altaNoDocenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaNoDocenteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.altaNoDocenteToolStripMenuItem.Text = "Alta No Docente";
             this.altaNoDocenteToolStripMenuItem.Click += new System.EventHandler(this.altaNoDocenteToolStripMenuItem_Click);
             // 
             // altaAlumnoToolStripMenuItem
             // 
             this.altaAlumnoToolStripMenuItem.Name = "altaAlumnoToolStripMenuItem";
-            this.altaAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaAlumnoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.altaAlumnoToolStripMenuItem.Text = "Alta Alumno";
             this.altaAlumnoToolStripMenuItem.Click += new System.EventHandler(this.altaAlumnoToolStripMenuItem_Click);
             // 
             // altaAulaToolStripMenuItem
             // 
             this.altaAulaToolStripMenuItem.Name = "altaAulaToolStripMenuItem";
-            this.altaAulaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaAulaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.altaAulaToolStripMenuItem.Text = "Alta Aula";
             this.altaAulaToolStripMenuItem.Click += new System.EventHandler(this.altaAulaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // reporteToolStripMenuItem
@@ -121,30 +121,35 @@
             this.informaciónPadresToolStripMenuItem.Name = "informaciónPadresToolStripMenuItem";
             this.informaciónPadresToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.informaciónPadresToolStripMenuItem.Text = "Información Padres";
+            this.informaciónPadresToolStripMenuItem.Click += new System.EventHandler(this.informaciónPadresToolStripMenuItem_Click);
             // 
             // sueldoDocenteToolStripMenuItem
             // 
             this.sueldoDocenteToolStripMenuItem.Name = "sueldoDocenteToolStripMenuItem";
             this.sueldoDocenteToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.sueldoDocenteToolStripMenuItem.Text = "Sueldo Docente";
+            this.sueldoDocenteToolStripMenuItem.Click += new System.EventHandler(this.sueldoDocenteToolStripMenuItem_Click);
             // 
             // sueldoNoDocenteToolStripMenuItem
             // 
             this.sueldoNoDocenteToolStripMenuItem.Name = "sueldoNoDocenteToolStripMenuItem";
             this.sueldoNoDocenteToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.sueldoNoDocenteToolStripMenuItem.Text = "Sueldo No Docente";
+            this.sueldoNoDocenteToolStripMenuItem.Click += new System.EventHandler(this.sueldoNoDocenteToolStripMenuItem_Click);
             // 
             // recaudaciónPorAulaToolStripMenuItem
             // 
             this.recaudaciónPorAulaToolStripMenuItem.Name = "recaudaciónPorAulaToolStripMenuItem";
             this.recaudaciónPorAulaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.recaudaciónPorAulaToolStripMenuItem.Text = "Recaudación por Aula";
+            this.recaudaciónPorAulaToolStripMenuItem.Click += new System.EventHandler(this.recaudaciónPorAulaToolStripMenuItem_Click);
             // 
             // recaudaciónTotalDeJardinToolStripMenuItem
             // 
             this.recaudaciónTotalDeJardinToolStripMenuItem.Name = "recaudaciónTotalDeJardinToolStripMenuItem";
             this.recaudaciónTotalDeJardinToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.recaudaciónTotalDeJardinToolStripMenuItem.Text = "Recaudación Total de Jardin";
+            this.recaudaciónTotalDeJardinToolStripMenuItem.Click += new System.EventHandler(this.recaudaciónTotalDeJardinToolStripMenuItem_Click);
             // 
             // fondo
             // 

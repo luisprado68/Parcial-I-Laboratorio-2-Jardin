@@ -17,6 +17,11 @@ namespace FrmJardinInfantes
         FrmAltaDocente frmDocente;
         FrmAltaAlumno frmAlumno;
         FrmAula frmAula;
+
+        FrmInfoPadres infoPadres;
+        FrmSueldoDocente frmSueldoDocente;
+        FrmSueldoAula frmSueldoAula;
+        FrmRecaudacionJardin frmRecaudacionJardin;
         public bool nuevoDocente;
         public bool nuevoAlumno;
         public bool nuevoRespon;
@@ -26,7 +31,7 @@ namespace FrmJardinInfantes
             InitializeComponent();
             nuevoDocente = false;
             nuevoAlumno = false;
-            frmAula = new FrmAula();
+          
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -131,6 +136,81 @@ namespace FrmJardinInfantes
                                              MessageBoxIcon.Information);
 
                 
+
+            }
+        }
+
+        private void informaciónPadresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            infoPadres = new FrmInfoPadres();
+            infoPadres.ShowDialog();
+            
+
+            if (infoPadres.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+
+
+            }
+        }
+
+        private void sueldoDocenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSueldoDocente = new FrmSueldoDocente();
+            frmSueldoDocente.ShowDialog();
+
+
+            if (frmSueldoDocente.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+
+
+            }
+        }
+
+        private void sueldoNoDocenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void recaudaciónPorAulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSueldoAula = new FrmSueldoAula();
+
+            frmSueldoAula.Show();
+            if (frmSueldoAula.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+
+
+            }
+        }
+
+        private void recaudaciónTotalDeJardinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRecaudacionJardin = new FrmRecaudacionJardin ();
+
+            frmRecaudacionJardin.Show();
+            if (frmRecaudacionJardin.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("",
+                                             "Confirmacion",
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+
+
 
             }
         }

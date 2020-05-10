@@ -45,9 +45,10 @@ namespace FrmJardinInfantes
             }
         }
         //agregamos pariente a alumno elgido del combox
-        public void AgregarPariente(Alumno alumno,string responsable)
+        public Responsable ValidoPariente(string responsable)
         {
             int pariente=0;
+
            for(int i = 0; i < this.responsables.Count; i++)
             {
                 if(this.responsables[i].ToString() == responsable)
@@ -56,8 +57,8 @@ namespace FrmJardinInfantes
                     break;
                 }
             }
-
-            alumno.Responsable = this.responsables[pariente];
+            return this.responsables[pariente];
+           
         }
         
 
@@ -69,8 +70,9 @@ namespace FrmJardinInfantes
                 Validaciones.ValidarDouble(this.textPrecio.Text, 999999999, 1))
                 
             {
-                
-                unAlumno = new Alumno(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked),float.Parse(textPrecio.Text));
+
+
+                unAlumno = new Alumno(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked), float.Parse(textPrecio.Text), this.ValidoPariente(this.cmbParintes.SelectedItem.ToString()));
 
                 this.DialogResult = DialogResult.OK;
             }

@@ -38,9 +38,10 @@ namespace JardinInfantes_Biblioteca
             set { this.responsable = value; }
         }
 
-        public Alumno(string nombre, string apellido, int dni, bool femenino, float precioCuota) : base(nombre, apellido, dni, femenino)
+        public Alumno(string nombre, string apellido, int dni, bool femenino, float precioCuota, Responsable responsable) : base(nombre, apellido, dni, femenino)
         {
             this.precioCuota = precioCuota;
+            this.responsable = responsable;
         }
 
         public static bool operator ==(Alumno a1, Alumno a2)
