@@ -77,6 +77,7 @@
             // 
             this.textContrasena.Location = new System.Drawing.Point(114, 113);
             this.textContrasena.Name = "textContrasena";
+            this.textContrasena.PasswordChar = '*';
             this.textContrasena.Size = new System.Drawing.Size(148, 20);
             this.textContrasena.TabIndex = 4;
             // 
@@ -104,7 +105,8 @@
             this.Controls.Add(this.lbUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmIngreso";
-            this.Text = "FrmIngreso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ingreso";
             this.Load += new System.EventHandler(this.FrmIngreso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

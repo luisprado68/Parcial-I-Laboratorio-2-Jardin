@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JardinInfantes-Biblioteca, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JardinInfantes-Biblioteca\bin\Debug\JardinInfantes-Biblioteca.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -178,12 +182,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JardinInfantes-Biblioteca\JardinInfantes-Biblioteca.csproj">
-      <Project>{0cfa6e6b-4e7e-450a-b8b4-4cc23d04ccf5}</Project>
-      <Name>JardinInfantes-Biblioteca</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo.jpg" />

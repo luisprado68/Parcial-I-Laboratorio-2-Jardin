@@ -54,7 +54,7 @@
             // 
             this.labelColor.AutoSize = true;
             this.labelColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColor.Location = new System.Drawing.Point(13, 32);
+            this.labelColor.Location = new System.Drawing.Point(23, 29);
             this.labelColor.Name = "labelColor";
             this.labelColor.Size = new System.Drawing.Size(45, 16);
             this.labelColor.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             this.labelTurno.AutoSize = true;
             this.labelTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTurno.Location = new System.Drawing.Point(9, 77);
+            this.labelTurno.Location = new System.Drawing.Point(23, 72);
             this.labelTurno.Name = "labelTurno";
             this.labelTurno.Size = new System.Drawing.Size(48, 16);
             this.labelTurno.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-4, 109);
+            this.label3.Location = new System.Drawing.Point(23, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.lbAlumnosSala.AutoSize = true;
             this.lbAlumnosSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAlumnosSala.Location = new System.Drawing.Point(709, 6);
+            this.lbAlumnosSala.Location = new System.Drawing.Point(741, 6);
             this.lbAlumnosSala.Name = "lbAlumnosSala";
             this.lbAlumnosSala.Size = new System.Drawing.Size(124, 16);
             this.lbAlumnosSala.TabIndex = 3;
@@ -110,9 +110,9 @@
             "Rojo",
             "Amarillo",
             "Verde"});
-            this.cmbColor.Location = new System.Drawing.Point(69, 29);
+            this.cmbColor.Location = new System.Drawing.Point(96, 23);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(121, 21);
+            this.cmbColor.Size = new System.Drawing.Size(148, 21);
             this.cmbColor.TabIndex = 6;
             this.cmbColor.Text = "Salas";
             // 
@@ -123,9 +123,9 @@
             this.cmbTurno.Items.AddRange(new object[] {
             "Mañana",
             "Tarde"});
-            this.cmbTurno.Location = new System.Drawing.Point(69, 73);
+            this.cmbTurno.Location = new System.Drawing.Point(96, 67);
             this.cmbTurno.Name = "cmbTurno";
-            this.cmbTurno.Size = new System.Drawing.Size(121, 21);
+            this.cmbTurno.Size = new System.Drawing.Size(148, 21);
             this.cmbTurno.TabIndex = 7;
             this.cmbTurno.Text = "Turno";
             // 
@@ -133,9 +133,9 @@
             // 
             this.cmbProfesor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbProfesor.FormattingEnabled = true;
-            this.cmbProfesor.Location = new System.Drawing.Point(69, 120);
+            this.cmbProfesor.Location = new System.Drawing.Point(96, 114);
             this.cmbProfesor.Name = "cmbProfesor";
-            this.cmbProfesor.Size = new System.Drawing.Size(121, 21);
+            this.cmbProfesor.Size = new System.Drawing.Size(148, 21);
             this.cmbProfesor.TabIndex = 8;
             this.cmbProfesor.Text = "Docentes";
             // 
@@ -159,7 +159,7 @@
             this.btnGuardarAula.Name = "btnGuardarAula";
             this.btnGuardarAula.Size = new System.Drawing.Size(252, 41);
             this.btnGuardarAula.TabIndex = 11;
-            this.btnGuardarAula.Text = "Guardar";
+            this.btnGuardarAula.Text = "Agregar Alumno";
             this.btnGuardarAula.UseVisualStyleBackColor = true;
             this.btnGuardarAula.Click += new System.EventHandler(this.btnGuardarAula_Click);
             // 
@@ -169,7 +169,7 @@
             this.listAlumnosSala.FormattingEnabled = true;
             this.listAlumnosSala.Location = new System.Drawing.Point(673, 29);
             this.listAlumnosSala.Name = "listAlumnosSala";
-            this.listAlumnosSala.Size = new System.Drawing.Size(252, 173);
+            this.listAlumnosSala.Size = new System.Drawing.Size(252, 186);
             this.listAlumnosSala.TabIndex = 13;
             // 
             // listAlumnosSinAula
@@ -203,9 +203,9 @@
             // 
             this.agregarProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.agregarProfesor.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregarProfesor.Location = new System.Drawing.Point(12, 169);
+            this.agregarProfesor.Location = new System.Drawing.Point(26, 163);
             this.agregarProfesor.Name = "agregarProfesor";
-            this.agregarProfesor.Size = new System.Drawing.Size(178, 34);
+            this.agregarProfesor.Size = new System.Drawing.Size(218, 34);
             this.agregarProfesor.TabIndex = 21;
             this.agregarProfesor.Text = "Crear Aula";
             this.agregarProfesor.UseVisualStyleBackColor = true;
@@ -216,9 +216,9 @@
             this.listAulasActuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAulasActuales.FormattingEnabled = true;
             this.listAulasActuales.ItemHeight = 16;
-            this.listAulasActuales.Location = new System.Drawing.Point(207, 30);
+            this.listAulasActuales.Location = new System.Drawing.Point(321, 32);
             this.listAulasActuales.Name = "listAulasActuales";
-            this.listAulasActuales.Size = new System.Drawing.Size(391, 164);
+            this.listAulasActuales.Size = new System.Drawing.Size(341, 180);
             this.listAulasActuales.TabIndex = 22;
             // 
             // btnVolver
@@ -237,7 +237,7 @@
             // 
             this.lbAula.AutoSize = true;
             this.lbAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAula.Location = new System.Drawing.Point(373, 9);
+            this.lbAula.Location = new System.Drawing.Point(431, 6);
             this.lbAula.Name = "lbAula";
             this.lbAula.Size = new System.Drawing.Size(111, 16);
             this.lbAula.TabIndex = 23;
@@ -247,7 +247,7 @@
             // 
             this.lbSala.AutoSize = true;
             this.lbSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSala.Location = new System.Drawing.Point(-4, 125);
+            this.lbSala.Location = new System.Drawing.Point(23, 119);
             this.lbSala.Name = "lbSala";
             this.lbSala.Size = new System.Drawing.Size(62, 16);
             this.lbSala.TabIndex = 24;

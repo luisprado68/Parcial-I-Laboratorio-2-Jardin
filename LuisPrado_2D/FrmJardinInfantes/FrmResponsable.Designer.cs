@@ -221,6 +221,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Name = "FrmResponsable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta Responsable";
             this.Load += new System.EventHandler(this.FrmResponsable_Load);
             this.grupoSexo.ResumeLayout(false);
