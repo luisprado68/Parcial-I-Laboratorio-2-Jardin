@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JardinInfantes-Biblioteca", "JardinInfantes-Biblioteca\JardinInfantes-Biblioteca.csproj", "{0CFA6E6B-4E7E-450A-B8B4-4CC23D04CCF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{0203F762-13D1-485D-AE17-ECD360773061}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmJardinInfantes", "FrmJardinInfantes\FrmJardinInfantes.csproj", "{CFEA30DA-034C-4331-8080-DDAA0E20A88B}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{0CFA6E6B-4E7E-450A-B8B4-4CC23D04CCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CFA6E6B-4E7E-450A-B8B4-4CC23D04CCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CFA6E6B-4E7E-450A-B8B4-4CC23D04CCF5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0203F762-13D1-485D-AE17-ECD360773061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0203F762-13D1-485D-AE17-ECD360773061}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0203F762-13D1-485D-AE17-ECD360773061}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0203F762-13D1-485D-AE17-ECD360773061}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CFEA30DA-034C-4331-8080-DDAA0E20A88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CFEA30DA-034C-4331-8080-DDAA0E20A88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFEA30DA-034C-4331-8080-DDAA0E20A88B}.Release|Any CPU.ActiveCfg = Release|Any CPU

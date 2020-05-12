@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace JardinInfantes_Biblioteca
 {
+#pragma warning disable CS0660 // 'Alumno' define el operador == o el operador != pero no invalida Object.Equals(object o)
+#pragma warning disable CS0661 // 'Alumno' define el operador == o el operador != pero no invalida Object.GetHashCode()
     public class Alumno : Persona
+#pragma warning restore CS0661 // 'Alumno' define el operador == o el operador != pero no invalida Object.GetHashCode()
+#pragma warning restore CS0660 // 'Alumno' define el operador == o el operador != pero no invalida Object.Equals(object o)
     {
         private Ecolor colorSala;
         private int legajo;
