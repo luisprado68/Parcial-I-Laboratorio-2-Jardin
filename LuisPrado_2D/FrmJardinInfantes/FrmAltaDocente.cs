@@ -36,8 +36,8 @@ namespace FrmJardinInfantes
             if (Validaciones.ValidarLetras(this.textNombre.Text) &&
                 Validaciones.ValidarLetras(this.textApellido.Text) &&
                 Validaciones.ValidarEntero(this.textDni.Text, 999999999, 1) &&
-                Validaciones.ValidarEntero(this.textHoraEntrada.Text, 999999999,1) &&
-                Validaciones.ValidarEntero(this.textHoraSalida.Text, 999999999,1) &&
+                Validaciones.ValidarEntero(this.textHoraEntrada.Text, 23,0) &&
+                Validaciones.ValidarEntero(this.textHoraSalida.Text, 23,0) &&
                 Validaciones.ValidarEntero(this.textValorHora.Text, 999999999,1))
             {
                 horaEntrada = int.Parse(textHoraEntrada.Text);
@@ -79,6 +79,7 @@ namespace FrmJardinInfantes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Hide();
         }
     }

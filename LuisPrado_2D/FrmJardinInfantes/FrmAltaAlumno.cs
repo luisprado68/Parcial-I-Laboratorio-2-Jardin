@@ -44,8 +44,8 @@ namespace FrmJardinInfantes
                 this.cmbParintes.Items.Add(item.ToString());
             }
         }
-        //agregamos pariente a alumno elgido del combox
-        public Responsable ValidoPariente(string responsable)
+        //Obtenemosel  pariente del alumno elgido del combox
+        public Responsable DevuelvoPariente(string responsable)
         {
             int pariente=0;
 
@@ -61,34 +61,34 @@ namespace FrmJardinInfantes
            
         }
 
-        public Responsable RetornoParentezco(string responsable)
+        public bool ValidoPariente(string responsable)
         {
-            int pariente = 0;
+            bool pariente = false;
 
             for (int i = 0; i < this.responsables.Count; i++)
             {
                 if (this.responsables[i].ToString() == responsable)
                 {
-                    pariente = i;
+                    pariente = true;
                     break;
                 }
             }
-            return this.responsables[pariente];
+            return pariente;
 
         }
-
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (Validaciones.ValidarLetras(this.textNombre.Text) &&
                 Validaciones.ValidarLetras(this.textApellido.Text) &&
                 Validaciones.ValidarEntero(this.textDni.Text, 999999999, 1) &&
-                Validaciones.ValidarDouble(this.textPrecio.Text, 999999999, 1))
+                Validaciones.ValidarDouble(this.textPrecio.Text, 999999999, 1)&&
+                this.ValidoPariente(this.cmbParintes.SelectedItem.ToString()))
                 
             {
 
 
-                unAlumno = new Alumno(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked), float.Parse(textPrecio.Text), this.ValidoPariente(this.cmbParintes.SelectedItem.ToString()));
+                unAlumno = new Alumno(this.textNombre.Text, this.textApellido.Text, int.Parse(textDni.Text), (radioFemenino.Checked), float.Parse(textPrecio.Text), this.DevuelvoPariente(this.cmbParintes.SelectedItem.ToString()));
 
                 this.DialogResult = DialogResult.OK;
             }
@@ -127,6 +127,7 @@ namespace FrmJardinInfantes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Hide();
         }
     }

@@ -30,17 +30,24 @@ namespace FrmJardinInfantes
 
         public void CargarSueldoAula(List<Aula> aulas)
         {
+            float recaudacionAlumno = 0;
             float recaudacion = 0;
             foreach (Aula aula in aulas)
             {
+                
+               
+
                 this.richSueldoAula.SelectedText = "Color de Sala:" + aula.ColorSala.ToString() + "Turno: " + aula.Turno.ToString() + "\n";
                 foreach (Alumno alumno in aula.Alumnos)
                 {
-                    recaudacion = 0;
-                    recaudacion = alumno.PrecioCuota + recaudacion;
+
+                    recaudacionAlumno = alumno.PrecioCuota + recaudacionAlumno;
                     
                 }
+                recaudacion = recaudacion + recaudacionAlumno;
+                recaudacionAlumno = 0;
                 this.richSueldoAula.SelectedText =  recaudacion + "\n";
+                recaudacion = 0;
             }
 
         }

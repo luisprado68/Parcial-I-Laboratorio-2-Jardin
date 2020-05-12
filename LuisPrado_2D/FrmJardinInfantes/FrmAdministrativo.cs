@@ -13,9 +13,9 @@ namespace FrmJardinInfantes
 {
     public partial class FrmAdministrativo : Form
     {
-         Administrativo admin;
-
-        
+        Administrativo admin;
+        private int horaEntrada;
+        private int horaSalida;
         public Administrativo Admin
         {
             get { return this.admin; }
@@ -34,8 +34,8 @@ namespace FrmJardinInfantes
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int horaEntrada = 0;
-            int horaSalida = 0;
+            horaEntrada = 0;
+            horaSalida = 0;
 
             if (Validaciones.ValidarLetras(this.textNombre.Text) &&
                 Validaciones.ValidarLetras(this.textApellido.Text) &&
@@ -112,6 +112,7 @@ namespace FrmJardinInfantes
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

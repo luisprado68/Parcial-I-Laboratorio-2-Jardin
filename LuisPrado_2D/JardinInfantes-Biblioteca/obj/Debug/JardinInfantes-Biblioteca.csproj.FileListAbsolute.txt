@@ -3,4 +3,3 @@ C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\JardinInfantes-Biblioteca
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\JardinInfantes-Biblioteca\obj\Debug\JardinInfantes-Biblioteca.csproj.CoreCompileInputs.cache
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\JardinInfantes-Biblioteca\obj\Debug\JardinInfantes-Biblioteca.dll
 C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\JardinInfantes-Biblioteca\obj\Debug\JardinInfantes-Biblioteca.pdb
-C:\Users\luisp\Documents\PrimerParcial_2D\LuisPrado_2D\JardinInfantes-Biblioteca\obj\Debug\JardinInfantes-Biblioteca.csprojAssemblyReference.cache

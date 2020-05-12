@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRecaudacionJardin));
             this.lbRecaudacionJardin = new System.Windows.Forms.Label();
             this.richRecaudacion = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
@@ -54,9 +55,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 343);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(423, 358);
             this.Controls.Add(this.lbRecaudacionJardin);
             this.Controls.Add(this.richRecaudacion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRecaudacionJardin";
             this.Text = "Recaudacion de Jardin";
             this.Load += new System.EventHandler(this.FrmRecaudacionJardin_Load);

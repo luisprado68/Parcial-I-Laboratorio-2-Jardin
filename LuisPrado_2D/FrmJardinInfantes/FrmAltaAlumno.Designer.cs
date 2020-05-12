@@ -214,7 +214,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Name = "FrmAltaAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAltaAlumno";
+            this.Text = "Alta Alumno";
             this.Load += new System.EventHandler(this.FrmAltaAlumno_Load);
             this.grupoSexo.ResumeLayout(false);
             this.grupoSexo.PerformLayout();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAula));
             this.labelColor = new System.Windows.Forms.Label();
             this.labelTurno = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,55 +47,56 @@
             this.listAulasActuales = new System.Windows.Forms.ListBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.lbAula = new System.Windows.Forms.Label();
+            this.lbSala = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelColor
             // 
             this.labelColor.AutoSize = true;
-            this.labelColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColor.Location = new System.Drawing.Point(13, 32);
             this.labelColor.Name = "labelColor";
-            this.labelColor.Size = new System.Drawing.Size(36, 13);
+            this.labelColor.Size = new System.Drawing.Size(45, 16);
             this.labelColor.TabIndex = 0;
             this.labelColor.Text = "Color";
             // 
             // labelTurno
             // 
             this.labelTurno.AutoSize = true;
-            this.labelTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTurno.Location = new System.Drawing.Point(9, 77);
             this.labelTurno.Name = "labelTurno";
-            this.labelTurno.Size = new System.Drawing.Size(40, 13);
+            this.labelTurno.Size = new System.Drawing.Size(48, 16);
             this.labelTurno.TabIndex = 1;
             this.labelTurno.Text = "Turno";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 123);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(-4, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Profesor";
             // 
             // lbAlumnosSala
             // 
             this.lbAlumnosSala.AutoSize = true;
-            this.lbAlumnosSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAlumnosSala.Location = new System.Drawing.Point(690, 9);
+            this.lbAlumnosSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlumnosSala.Location = new System.Drawing.Point(709, 6);
             this.lbAlumnosSala.Name = "lbAlumnosSala";
-            this.lbAlumnosSala.Size = new System.Drawing.Size(101, 13);
+            this.lbAlumnosSala.Size = new System.Drawing.Size(124, 16);
             this.lbAlumnosSala.TabIndex = 3;
             this.lbAlumnosSala.Text = "Alumnos en Sala";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(448, 227);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 13);
+            this.label5.Size = new System.Drawing.Size(126, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Alumnos sin Aula";
             // 
@@ -140,17 +142,19 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(684, 253);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 41);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Actualizar";
+            this.button1.Text = "Actualizar - Ver Aula";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnGuardarAula
             // 
             this.btnGuardarAula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarAula.Location = new System.Drawing.Point(684, 327);
             this.btnGuardarAula.Name = "btnGuardarAula";
             this.btnGuardarAula.Size = new System.Drawing.Size(252, 41);
@@ -163,7 +167,7 @@
             // 
             this.listAlumnosSala.AllowDrop = true;
             this.listAlumnosSala.FormattingEnabled = true;
-            this.listAlumnosSala.Location = new System.Drawing.Point(684, 30);
+            this.listAlumnosSala.Location = new System.Drawing.Point(673, 29);
             this.listAlumnosSala.Name = "listAlumnosSala";
             this.listAlumnosSala.Size = new System.Drawing.Size(252, 173);
             this.listAlumnosSala.TabIndex = 13;
@@ -188,16 +192,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(81, 227);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 13);
+            this.label6.Size = new System.Drawing.Size(163, 16);
             this.label6.TabIndex = 16;
             this.label6.Text = "Profesores Diponibles";
             // 
             // agregarProfesor
             // 
             this.agregarProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.agregarProfesor.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarProfesor.Location = new System.Drawing.Point(12, 169);
             this.agregarProfesor.Name = "agregarProfesor";
             this.agregarProfesor.Size = new System.Drawing.Size(178, 34);
@@ -208,15 +213,18 @@
             // 
             // listAulasActuales
             // 
+            this.listAulasActuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAulasActuales.FormattingEnabled = true;
+            this.listAulasActuales.ItemHeight = 16;
             this.listAulasActuales.Location = new System.Drawing.Point(207, 30);
             this.listAulasActuales.Name = "listAulasActuales";
-            this.listAulasActuales.Size = new System.Drawing.Size(455, 173);
+            this.listAulasActuales.Size = new System.Drawing.Size(391, 164);
             this.listAulasActuales.TabIndex = 22;
             // 
             // btnVolver
             // 
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(684, 398);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(252, 41);
@@ -228,12 +236,22 @@
             // lbAula
             // 
             this.lbAula.AutoSize = true;
-            this.lbAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAula.Location = new System.Drawing.Point(373, 9);
             this.lbAula.Name = "lbAula";
-            this.lbAula.Size = new System.Drawing.Size(32, 13);
+            this.lbAula.Size = new System.Drawing.Size(111, 16);
             this.lbAula.TabIndex = 23;
-            this.lbAula.Text = "Aula";
+            this.lbAula.Text = "Aulas Actuales";
+            // 
+            // lbSala
+            // 
+            this.lbSala.AutoSize = true;
+            this.lbSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSala.Location = new System.Drawing.Point(-4, 125);
+            this.lbSala.Name = "lbSala";
+            this.lbSala.Size = new System.Drawing.Size(62, 16);
+            this.lbSala.TabIndex = 24;
+            this.lbSala.Text = "En Sala";
             // 
             // FrmAula
             // 
@@ -241,6 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 451);
+            this.Controls.Add(this.lbSala);
             this.Controls.Add(this.lbAula);
             this.Controls.Add(this.listAulasActuales);
             this.Controls.Add(this.agregarProfesor);
@@ -259,9 +278,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelTurno);
             this.Controls.Add(this.labelColor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAula";
+            this.Text = "Alta Aula";
             this.Load += new System.EventHandler(this.FrmAula_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,5 +308,6 @@
         private System.Windows.Forms.ListBox listAulasActuales;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label lbAula;
+        private System.Windows.Forms.Label lbSala;
     }
 }

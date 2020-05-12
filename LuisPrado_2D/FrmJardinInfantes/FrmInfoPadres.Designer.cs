@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInfoPadres));
             this.richInfoPadres = new System.Windows.Forms.RichTextBox();
             this.lbInfoPadres = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -54,11 +55,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(452, 450);
             this.Controls.Add(this.lbInfoPadres);
             this.Controls.Add(this.richInfoPadres);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInfoPadres";
-            this.Text = "FrmInfoPadres";
+            this.Text = "Informacion de los Padres";
             this.Load += new System.EventHandler(this.FrmInfoPadres_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

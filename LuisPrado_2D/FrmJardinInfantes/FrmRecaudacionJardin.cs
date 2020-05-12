@@ -35,15 +35,16 @@ namespace FrmJardinInfantes
                 
                 foreach (Alumno alumno in aula.Alumnos)
                 {
-                    recaudacionAula = 0;
+                    
                     recaudacionAula = alumno.PrecioCuota + recaudacionAula;
 
                 }
                 recaudacionJardin = recaudacionAula + recaudacionJardin;
-            
+                recaudacionAula = 0;
             }
 
             this.richRecaudacion.SelectedText = recaudacionJardin + "\n";
+            
         }
     }
 }

@@ -18,20 +18,14 @@ namespace FrmJardinInfantes
         public Aula aula;
         public List<Docente> docentes;
         public List<Alumno> alumnosSinAula;
-        public List<Alumno> alumnosEnAula;
         public List<Aula> aulas;
         public bool agrego = false;
-
-
-
-
 
         public FrmAula()
         {
             InitializeComponent();
             docentes = new List<Docente>();
             alumnosSinAula = new List<Alumno>();
-            alumnosEnAula = new List<Alumno>();
             aulas = new List<Aula>();
 
             //Docentes sin Aula lista
@@ -46,7 +40,7 @@ namespace FrmJardinInfantes
 
 
             // alumnos sin aula lista
-            this.ListaAlumnos();
+            
             Responsable r1 = new Responsable("Juan", "Prado", 50001, false, Eparentezco.Padre, "1550238312");
             this.alumnosSinAula.Add(new Alumno("Luis", "Prado", 1000, false, 25000, r1));
             Responsable r2 = new Responsable("Sara", "Prado", 50002, true, Eparentezco.Madre, "1550238312");
@@ -210,10 +204,10 @@ namespace FrmJardinInfantes
             // argego docente creado en form docente
 
             //agrego los aulmnos al aula validar que sean la misma cantidad de aula.
-            this.AgregarAlumnoAula(this.alumnosSinAula, this.aulas[0], 0, 5);
-            this.AgregarAlumnoAula(this.alumnosSinAula, this.aulas[1], 0, 5);
-            this.AgregarAlumnoAula(this.alumnosSinAula, this.aulas[2], 0, 5);
-            this.AgregarAlumnoAula(this.alumnosSinAula, this.aulas[3], 0, 5);
+            this.AgregarAlumnosAula(this.alumnosSinAula, this.aulas[0], 0, 5);
+            this.AgregarAlumnosAula(this.alumnosSinAula, this.aulas[1], 0, 5);
+            this.AgregarAlumnosAula(this.alumnosSinAula, this.aulas[2], 0, 5);
+            this.AgregarAlumnosAula(this.alumnosSinAula, this.aulas[3], 0, 5);
             //this.AgregarAlumnoAula(this.alumnosSinAula, this.aulas[4], 0, 5);
             //this.AgregarAlumnoAula(this.alumnosSinAula, this.aulas[5], 0, 5);
             //this.AgregarAlumnoAula(this.alumnosSinAula, this.aulas[6], 0, 5);
@@ -224,59 +218,74 @@ namespace FrmJardinInfantes
 
         }
 
-
-
         public List<Aula> Aulas
         {
             get { return this.aulas; }
           
         }
 
-
         public FrmAula(Docente docente):this()
         {
             this.unDocente = docente;
-            this.AgregarDocenteLista(this.docentes, this.unDocente);
+            this.AgregarDocenteAListaDocente(this.docentes, this.unDocente);
 
         }
 
         public FrmAula(Alumno alumno):this()
         {
             this.unAlumno = alumno;
-            this.AgregarAlumnoLista(this.alumnosSinAula, this.unAlumno);
+            this.AgregarAlumnoListaAlumnos(this.alumnosSinAula, this.unAlumno);
         }
 
         public FrmAula(Docente docente,Alumno alumno) : this()
         {
             this.unDocente = docente;
             this.unAlumno = alumno;
-            this.AgregarDocenteLista(this.docentes, this.unDocente);
-            this.AgregarAlumnoLista(this.alumnosSinAula, this.unAlumno);
+            this.AgregarDocenteAListaDocente(this.docentes, this.unDocente);
+            this.AgregarAlumnoListaAlumnos(this.alumnosSinAula, this.unAlumno);
 
         }
 
         private void FrmAula_Load(object sender, EventArgs e)
         {
-            MostrarAulas(this.aulas);
+            this.MostrarAulas(this.aulas);//muestro las aulas en el combobox Aulas.
 
-            
-
-            //agrego los docentes al aula
-            AgregarDocentesAula(this.aulas);
-
-
-
-           
+            this.AgregarDocentesAula(this.aulas);//muestro los docentes con aula en el combobox
 
             //cargo la lista alumnos a listbox muestro la lista despues de haber agregado los alumnos al alua por que se eliminan de la lista
-            this.CargarAlumnosSinAula();
+            this.CargarAlumnosSinAulaListBox();
 
             //Agrego la lista de docentes sin aula a listbox
-            this.CargarDocentes(this.docentes,this.aulas);
+            this.CargarDocentesSinAulaListBox(this.docentes,this.aulas);
         }
 
+        //Agrega los docentes que estan asignados a un aula en el cmbox
+        public void AgregarDocentesAula(List<Aula> a)
+        {
+            //agergar el docente de aula
+
+            this.cmbProfesor.Items.Clear();
+
+            foreach (Aula item in a)
+            {
+                //paso un un docente por cada aula
+
+                this.cmbProfesor.Items.Add(item.Docente.Nombre + "-" + item.Docente.Apellido);
+
+            }
+
+
+        }
+        public void MostrarAulas(List<Aula> aulas)
+        {
+            this.listAulasActuales.Items.Clear();
+            foreach (Aula item in aulas)
+            {
+                this.listAulasActuales.Items.Add("Sala "+item.ColorSala+" - Turno "+item.Turno+" - "+item.Docente.Nombre+" - "+item.Docente.Apellido);
+            }
+        }
         //Agrego la lista de docentes sin aula a listbox
-        public void CargarDocentes(List<Docente> docentes,List<Aula> aulas)
+        public void CargarDocentesSinAulaListBox(List<Docente> docentes,List<Aula> aulas)
         {
             listProfesoresDisponibles.Items.Clear();
             bool esIgual;
@@ -292,7 +301,6 @@ namespace FrmJardinInfantes
                         esIgual = true;
                     }
 
-                   
                 }
 
                 if (!esIgual)
@@ -300,14 +308,12 @@ namespace FrmJardinInfantes
                     listProfesoresDisponibles.Items.Add(docente.ToString());
                 }
             }
-
-            
         }
 
 
 
         //Agrego a la lista de alumnos sin aula a la listbox
-        public void CargarAlumnosSinAula()
+        public void CargarAlumnosSinAulaListBox()
         {
             listAlumnosSinAula.Items.Clear();// limpiamos la lista 
 
@@ -324,7 +330,7 @@ namespace FrmJardinInfantes
         }
 
         //agrego un conjunto de alumnos a una sala y  borro de la lista
-        public bool AgregarAlumnoAula(List<Alumno> alumnos,Aula aula,int minimo,int maximo)
+        public bool AgregarAlumnosAula(List<Alumno> alumnos,Aula aula,int minimo,int maximo)
         {
             bool agrego = false;
             //para aregarlos al aula cuando se crean los alumnos y borro los que se pasan
@@ -343,8 +349,9 @@ namespace FrmJardinInfantes
         }
 
         //Agrega los alumnos que tienen aula asignada a listbox.
-        public void AgregarAulaList(Aula aula)
+        public void AgregarAlumnosEnSalaListBox(Aula aula)
         {
+            listAlumnosSala.Items.Clear();
             foreach (Alumno item in aula.Alumnos)
             {
                 if (aula.Alumnos.Count != 0)
@@ -357,7 +364,7 @@ namespace FrmJardinInfantes
         }
 
         //Agrega docentes creados a la lista de docentes
-        public bool AgregarDocenteLista(List<Docente> l,Docente d)
+        public bool AgregarDocenteAListaDocente(List<Docente> l,Docente d)
         {
             bool esigual = false;
 
@@ -379,7 +386,7 @@ namespace FrmJardinInfantes
         }
 
         //Agrega alumnos creados a la lista de alumnos
-        public bool AgregarAlumnoLista(List<Alumno> lista,Alumno a)
+        public bool AgregarAlumnoListaAlumnos(List<Alumno> lista,Alumno a)
         {
             bool esIgual = false;
 
@@ -399,28 +406,6 @@ namespace FrmJardinInfantes
         }
 
 
-        //Agrega los docentes que estan asignados a un aula en el cmbox
-        public void AgregarDocentesAula(List<Aula> a)
-        {
-            //agergar el docente de aula
-
-
-            this.cmbProfesor.Items.Clear();
-
-            foreach (Aula item in a)
-            {
-                //paso un un docente por cada aula
-                
-                this.cmbProfesor.Items.Add(item.Docente.Nombre + "-"+item.Docente.Apellido);
-
-            }
-
-            
-        }
-
-     
-
-
         //boton actualizar
         private void button1_Click(object sender, EventArgs e)
         {
@@ -428,16 +413,16 @@ namespace FrmJardinInfantes
 
             if (this.cmbColor.SelectedIndex == -1)
             {
-                MessageBox.Show("No se eligio ninguna opcion para actualizar aula");
+                MessageBox.Show("PARA VER AULA SELECCIONAR: COLOR DE SALA - TURNO - PROFESOR EN AULA");
 
             }
             else if (this.cmbTurno.SelectedIndex == -1)
             {
-                MessageBox.Show("No se eligio ninguna opcion para actualizar aula");
+                MessageBox.Show("PARA VER AULA SELECCIONAR: COLOR DE SALA - TURNO - PROFESOR EN AULA");
             }
             else if (this.cmbProfesor.SelectedIndex == -1)
             {
-                MessageBox.Show("No se eligio ninguna opcion para actualizar aula");
+                MessageBox.Show("PARA VER AULA SELECCIONAR: COLOR DE SALA - TURNO - PROFESOR EN AULA");
             }
             else if (this.cmbColor.SelectedIndex + 1 == (int)Ecolor.Naranja)
             {
@@ -449,16 +434,15 @@ namespace FrmJardinInfantes
                     {
                         this.BackColor = Color.Orange;
                        
-                        this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
-                        AgregarAulaList(this.aulas[i]);
+                        AgregarAlumnosEnSalaListBox(this.aulas[i]);
                         MostrarAulas(this.aulas);
                     }
                 }
 
                 if (!encontroAula)
                 {
-                    MessageBox.Show("No existe aula con esos parametros!");
+                    MessageBox.Show("NO EXISTE AULA CON ESOS PARAMETROS!");
                 }
 
             }
@@ -472,19 +456,16 @@ namespace FrmJardinInfantes
                     if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString() == this.aulas[i].ColorSala.ToString())
                     {
                         this.BackColor = Color.Red;
-                        this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
-                        AgregarAulaList(this.aulas[i]);
+                        AgregarAlumnosEnSalaListBox(this.aulas[i]);
                         MostrarAulas(this.aulas);
                     }
                 }
 
                 if (!encontroAula)
                 {
-                    MessageBox.Show("No existe aula con esos parametros!");
+                    MessageBox.Show("NO EXISTE AULA CON ESOS PARAMETROS!");
                 }
-
-
             }
             else if (this.cmbColor.SelectedIndex + 1 == (int)Ecolor.Amarillo)
             {    // depediendo de colo profesoy y turno muestra:
@@ -495,15 +476,14 @@ namespace FrmJardinInfantes
                     if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString() == this.aulas[i].ColorSala.ToString())
                     {
                         this.BackColor = Color.Yellow;
-                        this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
-                        AgregarAulaList(this.aulas[i]);
+                        AgregarAlumnosEnSalaListBox(this.aulas[i]);
                         MostrarAulas(this.aulas);
                     }
                 }
                 if (!encontroAula)
                 {
-                    MessageBox.Show("No existe aula con esos parametros!");
+                    MessageBox.Show("NO EXISTE AULA CON ESOS PARAMETROS!");
                 }
 
             }
@@ -516,39 +496,21 @@ namespace FrmJardinInfantes
                     if (this.cmbProfesor.SelectedItem.ToString() == this.aulas[i].Docente.Nombre + "-" + this.aulas[i].Docente.Apellido && this.cmbTurno.SelectedItem.ToString() == this.aulas[i].Turno.ToString() && this.cmbColor.SelectedItem.ToString() == this.aulas[i].ColorSala.ToString())
                     {
                         this.BackColor = Color.Green;
-                        this.listAlumnosSala.Items.Clear();
                         encontroAula = true;
-                        AgregarAulaList(this.aulas[i]);
+                        AgregarAlumnosEnSalaListBox(this.aulas[i]);
                         MostrarAulas(this.aulas);
                     }
                 }
                 if (!encontroAula)
                 {
-                    MessageBox.Show("No existe aula con esos parametros!");
+                    MessageBox.Show("NO EXISTE AULA CON ESOS PARAMETROS!");
                 }
             }
 
-
-
-            //al final miuestro las lista de aulas
-           
-
-
         }
 
-        public void ListaResponsables()
-        {
-            
-        }
-
-        public void ListaAlumnos()
-        {
-            
-
-
-
-
-        }
+        
+        
 
         private void btnGuardarAula_Click(object sender, EventArgs e)
         {
@@ -600,7 +562,6 @@ namespace FrmJardinInfantes
 
                 }
 
-
                 if (this.cmbTurno.SelectedItem.ToString() == Eturno.Mañana.ToString())
                 {
                     turno = Eturno.Mañana;
@@ -612,7 +573,6 @@ namespace FrmJardinInfantes
 
                 }
 
-
                 //encontarel alumno
 
                 for(int i = 0; i < this.alumnosSinAula.Count; i++)
@@ -623,9 +583,7 @@ namespace FrmJardinInfantes
                     }
                 }
 
-
                 //agrego los de la lista de docentes que cuando se agerga un docente se valida que no se repita.
-
 
                 for (int i = 0; i < this.docentes.Count; i++)
                 {
@@ -637,8 +595,6 @@ namespace FrmJardinInfantes
                     }
 
                 }
-
-
                 // encontrar aula actual---
 
                 for (int i=0;i<this.aulas.Count; i++)
@@ -648,13 +604,12 @@ namespace FrmJardinInfantes
                         aula = i;
                     }
                 }
-
                 //agrego al aula el alumno seleccionado y encontrado en la lista de alumnos sin aula.
                 if (this.aulas[aula] + this.alumnosSinAula[alumno])
                 {
                     this.alumnosSinAula.RemoveAt(alumno); ///elimino el alumno de la lista sin asiganar
                     MessageBox.Show("Alumnos agregado a la sala");
-                    CargarAlumnosSinAula();//actualizo el lista de alunos sin asignar
+                    CargarAlumnosSinAulaListBox();//actualizo el lista de alunos sin asignar
                 }
                 else
                 {
@@ -726,15 +681,15 @@ namespace FrmJardinInfantes
 
             if(this.cmbColor.SelectedIndex== -1)
             {
-                MessageBox.Show("No se eligio ninguna opcion para agregar docente a aula nueva");
+                MessageBox.Show("Para Crear un Aula Nueva debe Elegir: Color de Sala - Turno - Profesor Disponible");
                 
             }else if( this.cmbTurno.SelectedIndex == -1 )
             {
-                MessageBox.Show("No se eligio ninguna opcion para agregar docente a aula nueva");
+                MessageBox.Show("Para Crear un Aula Nueva debe Elegir: Color de Sala - Turno - Profesor Disponible");
             }
             else if (this.listProfesoresDisponibles.SelectedIndex == -1 )
             {
-                MessageBox.Show("No se eligio ninguna opcion para agregar docente a aula nueva");
+                MessageBox.Show("Para Crear un Aula Nueva debe Elegir: Color de Sala - Turno - Profesor Disponible");
             }
             else
             {
@@ -791,13 +746,13 @@ namespace FrmJardinInfantes
                 {
                     MessageBox.Show("Se agrego docente a nueva aula creada");
                     AgregarDocentesAula(this.aulas);
-                    CargarDocentes(this.docentes, this.aulas);
+                    CargarDocentesSinAulaListBox(this.docentes, this.aulas);
 
 
                 }
                 else
                 {
-                    MessageBox.Show("Ya se encuentra esa sala ");
+                    MessageBox.Show("Ya se encuentra esa sala - Revisar Aulas Actuales ");
                 }
 
 
@@ -812,17 +767,10 @@ namespace FrmJardinInfantes
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
 
         }
 
-        public void MostrarAulas(List<Aula> aulas)
-        {
-            this.listAulasActuales.Items.Clear();
-            foreach (Aula item in aulas)
-            {
-                this.listAulasActuales.Items.Add(item.ToString());
-            }
-        }
+        
     }
 }

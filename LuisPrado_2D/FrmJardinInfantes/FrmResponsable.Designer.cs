@@ -155,6 +155,7 @@
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -203,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(362, 327);
             this.Controls.Add(this.cmbParentezco);
             this.Controls.Add(this.textTelefono);
@@ -220,7 +221,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Name = "FrmResponsable";
-            this.Text = "Alta Rezponsable";
+            this.Text = "Alta Responsable";
             this.Load += new System.EventHandler(this.FrmResponsable_Load);
             this.grupoSexo.ResumeLayout(false);
             this.grupoSexo.PerformLayout();
