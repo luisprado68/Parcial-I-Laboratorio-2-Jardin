@@ -14,11 +14,19 @@ namespace JardinInfantes_Biblioteca
         private bool femenino;
         private string nombre;
 
+        public void ValidarPersonaSinDni(int valor)
+        {
+            if (valor < 1000000)
+            {
+                throw new PersonaSinDNIException("DNI Incorrecto!");
+            }
+        }
         protected Persona(string nombre,string apellido,int dni) 
         {
             this.nombre = nombre;
             this.apellido = apellido;
-            this.dni = dni;
+
+            this.Dni = dni; // lo asgnamos a la propiedad para que haga la validacion de dni.
         }
 
         protected Persona(string nombre, string apellido, int dni,bool femenino):this(nombre,apellido,dni)
@@ -35,7 +43,10 @@ namespace JardinInfantes_Biblioteca
         public int Dni
         {
             get { return this.dni; }
-            set { this.dni = value; }
+
+            set {
+                ValidarPersonaSinDni(value);
+                this.dni = value; }
         }
 
         public bool Femenino

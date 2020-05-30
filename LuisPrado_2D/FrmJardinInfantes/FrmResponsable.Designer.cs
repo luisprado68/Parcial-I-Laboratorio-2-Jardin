@@ -44,6 +44,7 @@
             this.lbTelefono = new System.Windows.Forms.Label();
             this.textTelefono = new System.Windows.Forms.TextBox();
             this.cmbParentezco = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.grupoSexo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -200,12 +201,22 @@
             this.cmbParentezco.Size = new System.Drawing.Size(132, 21);
             this.cmbParentezco.TabIndex = 47;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(137, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "(11)";
+            // 
             // FrmResponsable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(362, 327);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbParentezco);
             this.Controls.Add(this.textTelefono);
             this.Controls.Add(this.lbTelefono);
@@ -249,5 +260,6 @@
         private System.Windows.Forms.Label lbTelefono;
         private System.Windows.Forms.TextBox textTelefono;
         private System.Windows.Forms.ComboBox cmbParentezco;
+        private System.Windows.Forms.Label label1;
     }
 }

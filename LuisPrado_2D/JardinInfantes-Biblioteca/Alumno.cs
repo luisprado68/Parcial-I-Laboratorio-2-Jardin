@@ -16,6 +16,8 @@ namespace JardinInfantes_Biblioteca
         private int legajo;
         private float precioCuota;
         private Responsable responsable;
+
+       
         
 
         public float PrecioCuota

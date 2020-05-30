@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JardinInfantes-Biblioteca",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmJardinInfantes", "FrmJardinInfantes\FrmJardinInfantes.csproj", "{CFEA30DA-034C-4331-8080-DDAA0E20A88B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaUnitarias", "PruebaUnitarias\PruebaUnitarias.csproj", "{5EAE3E46-5245-482E-A1AC-CD95BF347B24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CFEA30DA-034C-4331-8080-DDAA0E20A88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFEA30DA-034C-4331-8080-DDAA0E20A88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFEA30DA-034C-4331-8080-DDAA0E20A88B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EAE3E46-5245-482E-A1AC-CD95BF347B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAE3E46-5245-482E-A1AC-CD95BF347B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAE3E46-5245-482E-A1AC-CD95BF347B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAE3E46-5245-482E-A1AC-CD95BF347B24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
